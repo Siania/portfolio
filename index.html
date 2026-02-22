@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Oksana Kozhan — Legal · Events · Marketing</title>
+  </head>
+  <body>
+    <script>
+      try {
+        var t = localStorage.getItem('oksana-theme') || 'dark';
+        document.documentElement.dataset.theme = t;
+      } catch (_) {}
+    </script>
+    <!-- Liquid Glass SVG Filters - Core Engine -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+      <defs>
+        <filter id="liquid-glass" x="-20%" y="-20%" width="140%" height="140%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.015 0.015" numOctaves="2" seed="2" result="noise"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" xChannelSelector="R" yChannelSelector="G" result="displaced"/>
+          <feGaussianBlur in="displaced" stdDeviation="0.4" result="blurred"/>
+          <feComposite in="blurred" in2="SourceGraphic" operator="atop"/>
+        </filter>
+        <filter id="liquid-glass-strong" x="-20%" y="-20%" width="140%" height="140%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.012 0.012" numOctaves="3" seed="5" result="noise"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="14" xChannelSelector="R" yChannelSelector="G" result="displaced"/>
+          <feGaussianBlur in="displaced" stdDeviation="0.6" result="blurred"/>
+          <feComposite in="blurred" in2="SourceGraphic" operator="atop"/>
+        </filter>
+      </defs>
+    </svg>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

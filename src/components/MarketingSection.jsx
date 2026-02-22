@@ -1,0 +1,103 @@
+import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
+import GlassDivider from './GlassDivider';
+
+const cards = [
+  {
+    title: 'Digital Content Strategy',
+    org: 'Ukrainalaisten yhdistys Suomessa',
+    highlight: '1.7M views on Facebook, 380K on Instagram',
+    content: [
+      'Digital content strategy driving 1.7M views on Facebook, 380K on Instagram',
+      'Community engagement and advocacy content',
+    ],
+    tags: ['Social Media', '1.7M Views', 'Facebook', 'Instagram', 'Content Strategy'],
+  },
+  {
+    title: 'Marketing Coordination',
+    org: 'VPEB Music',
+    content: [
+      'Coordinate event marketing campaigns',
+      'Social media promotion schedules',
+      'Community engagement strategies',
+    ],
+    tags: ['Event Marketing', 'Social Media', 'Community'],
+  },
+];
+
+const academic = [
+  { title: 'Market Entry Strategy — Rhode Skin into Finland', desc: 'Full marketing plan for US beauty brand entering Finnish market. Competitor analysis, target demographics, digital marketing tactics.', tags: ['Market Research', 'Brand Strategy', 'Finland', 'Beauty Industry'] },
+  { title: 'Sustainability Strategy — Nova Post', desc: 'Comprehensive ESG framework presentation aligned with EU sustainability standards.', tags: ['ESG', 'Sustainability', 'Corporate Strategy', 'EU Standards'] },
+  { title: 'Applied Project — Visiontech Solutions', desc: 'Business process improvements for multinational operations.', tags: ['Operations', 'Multinational', 'Process Design'] },
+];
+
+const tools = [
+  'Canva', 'Midjourney', 'DALL-E', 'Kling', 'Runway', 'Social Analytics',
+  'MS Office Suite', 'Meta Business', 'Community Management',
+];
+
+export default function MarketingSection({ asPage = false }) {
+  const [ref, isVisible] = useRevealOnScroll();
+
+  return (
+    <>
+      {!asPage && <GlassDivider />}
+      <section id="marketing" ref={ref} className={isVisible ? 'visible' : ''}>
+        <div className="reveal reveal-header">
+          <div className="accent-line" style={{ background: 'var(--accent-marketing)' }} />
+          <h2 className="section-title">Marketing</h2>
+          <p className="section-subtitle">Digital Strategy · Social Media · Brand Growth</p>
+        </div>
+
+        <div style={{ maxWidth: 760, margin: '0 auto' }}>
+          {cards.map((card, i) => (
+            <div key={i} className="glass-deep section-marketing reveal" style={{ padding: 28, borderRadius: 16, marginBottom: 20 }}>
+              <h3 style={{ fontFamily: 'var(--font-accent)', fontSize: 18, fontWeight: 600, letterSpacing: '0.04em', marginBottom: 4 }}>{card.title} · {card.org}</h3>
+              {card.highlight && (
+                <p style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontStyle: 'italic', color: 'var(--cream)', marginBottom: 12 }}>{card.highlight}</p>
+              )}
+              <ul style={{ marginBottom: 16, paddingLeft: 20, color: 'var(--text-secondary)', lineHeight: 1.7 }}>
+                {card.content.map((line) => <li key={line}>{line}</li>)}
+              </ul>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                {card.tags.map((tag) => (
+                  <span key={tag} className="tag-chip" style={{ borderColor: 'color-mix(in srgb, var(--accent-marketing) 50%, transparent)' }}>{tag}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+
+          <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 16, textAlign: 'center' }}>Academic Projects</p>
+          {academic.map((item) => (
+            <div key={item.title} className="glass-deep section-marketing reveal" style={{ padding: 28, borderRadius: 16, marginBottom: 20 }}>
+              <h4 style={{ fontFamily: 'var(--font-accent)', fontSize: 16, fontWeight: 600, letterSpacing: '0.03em', marginBottom: 8 }}>{item.title}</h4>
+              <p style={{ color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 12 }}>{item.desc}</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                {item.tags.map((tag) => (
+                  <span key={tag} className="tag-chip" style={{ borderColor: 'color-mix(in srgb, var(--accent-marketing) 50%, transparent)' }}>{tag}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+
+          <div className="glass reveal" style={{ padding: 24, borderRadius: 16, marginBottom: 32 }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'center' }}>
+              {tools.map((t) => (
+                <span key={t} className="tag-chip" style={{ borderColor: 'color-mix(in srgb, var(--accent-marketing) 50%, transparent)' }}>{t}</span>
+              ))}
+            </div>
+          </div>
+
+          <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 16, textAlign: 'center' }}>Marketing Projects</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16, maxWidth: 500, margin: '0 auto' }}>
+            {[1, 2].map((n) => (
+              <div key={n} className="glass reveal" style={{ padding: 40, borderRadius: 16, border: '2px dashed var(--glass-border)', textAlign: 'center', cursor: 'pointer' }}>
+                <span style={{ fontSize: 32, color: 'var(--text-muted)' }}>+</span>
+                <p style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 8 }}>Add Marketing Project</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
