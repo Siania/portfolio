@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Nav from './components/Nav';
 import ThemeSwitcher from './components/ThemeSwitcher';
+import ContactFloatingButton from './components/ContactFloatingButton';
 import HomePage from './pages/HomePage';
 
 const sectionRoutes = ['about', 'legal', 'events', 'marketing', 'certifications', 'contact'];
@@ -15,6 +16,7 @@ function App() {
 
       <Nav />
       <ThemeSwitcher />
+      <ContactFloatingButton />
 
       <main>
         <Routes>

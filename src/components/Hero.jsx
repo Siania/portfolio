@@ -113,7 +113,7 @@ export default function Hero({ ctaText = 'Explore My Work ↓', onCtaClick }) {
       >
         {[
           { value: '1.7M+', label: 'Social Media Views' },
-          { value: '€43,000', label: 'Funds Raised' },
+          { value: '€100,000+', label: 'Funds Raised' },
           { value: '4+', label: 'Languages Spoken' },
         ].map((stat) => (
           <div key={stat.label} className="glass glass-deep" style={{ padding: '20px 32px', borderRadius: 16 }}>

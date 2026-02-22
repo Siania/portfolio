@@ -19,15 +19,15 @@ const cards = [
     title: 'Marketing & Event Coordinator',
     org: 'Ukrainalaisten yhdistys Suomessa',
     period: 'May 2024 – May 2025',
-    highlight: '€43,000',
+    highlight: '€100,000+',
     image: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80',
     imageAlt: 'Community and cultural events',
     content: [
-      'Fundraising campaign: raised €43,000',
+      'Fundraising campaign: raised €100,000+',
       'Partnerships: Helsingin Sanomat, Helsinki Book Fair, Maailma kylässä, Finnish Parliament',
       'Logistics and community engagement for cultural and advocacy events',
     ],
-    tags: ['Fundraising', '€43K', 'Cultural Events', 'Government Relations', 'Helsinki'],
+    tags: ['Fundraising', '€100K+', 'Cultural Events', 'Government Relations', 'Helsinki'],
   },
   {
     title: 'Info Team Volunteer',
@@ -123,7 +123,7 @@ export default function EventsSection({ asPage = false }) {
 
           <div className="glass glass-deep reveal" style={{ padding: 24, borderRadius: 16, textAlign: 'center', marginBottom: 32, borderColor: 'color-mix(in srgb, var(--accent-events) 40%, transparent)' }}>
             <p style={{ color: 'var(--text-secondary)', fontSize: 15 }}>
-              Multiple major partnerships · €43K raised · 1000s of attendees managed
+              Multiple major partnerships · €100K+ raised · 1000s of attendees managed
             </p>
           </div>
 
