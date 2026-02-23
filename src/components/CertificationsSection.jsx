@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
 import GlassDivider from './GlassDivider';
 
-const STORAGE_KEY = 'oksana-certifications';
+const STORAGE_KEY = 'oksana-certifications-v2';
 
 const initialCerts = [
   { id: '1', name: 'Bachelor of Law', institution: 'Ivan Franko National University of Lviv', year: '2023', link: '/certificates/bachelor-of-law.pdf' },
