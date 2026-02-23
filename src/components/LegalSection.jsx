@@ -30,6 +30,16 @@ const cards = [
     content: ['Organized legal events for major law firms and students'],
     tags: ['Legal Events', 'Content Strategy'],
   },
+  {
+    title: 'Lawyer Assistant',
+    org: 'Petryk I.Y., Ukraine',
+    period: '2019 – 2022',
+    content: [
+      'Conducted client consultations and assisted with legal documentation',
+      'Analyzed cases and provided strategic problem-solving recommendations',
+    ],
+    tags: ['Client Consultations', 'Legal Documentation', 'Case Analysis', 'Strategic Advisory'],
+  },
 ];
 
 const skills = [

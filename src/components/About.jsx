@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom';
 import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
 
 const education = [
-  { name: 'Ivan Franko, Lviv', degree: 'Bachelor of Law', period: '2019–2023' },
-  { name: 'University of Turku', degree: 'Exchange', period: '2022–2023' },
-  { name: 'Aalto Open University', degree: 'Business & Law', period: '2022–Current' },
-  { name: 'Metropolia', degree: 'BBA European Business', period: '2024–Current' },
+  { name: 'Ivan Franko, Lviv', degree: 'Bachelor of Law', period: '2019–2023', slug: 'ivan-franko' },
+  { name: 'University of Turku', degree: 'Exchange', period: '2022–2023', slug: 'university-of-turku' },
+  { name: 'Aalto Open University', degree: 'Business & Law', period: '2022–Current', slug: 'aalto' },
+  { name: 'Metropolia', degree: 'BBA European Business', period: '2024–Current', slug: 'metropolia' },
 ];
 
 export default function About() {
@@ -37,14 +38,15 @@ export default function About() {
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
             {education.map((edu) => (
-              <span
-                key={edu.name}
+              <Link
+                key={edu.slug}
+                to={`/education/${edu.slug}`}
                 className="glass pill tag-chip"
-                style={{ fontSize: 11 }}
+                style={{ fontSize: 11, textDecoration: 'none', color: 'inherit' }}
                 title={`${edu.degree} · ${edu.period}`}
               >
-                {edu.name} — {edu.degree}
-              </span>
+                {edu.name} — {edu.degree} →
+              </Link>
             ))}
           </div>
         </div>

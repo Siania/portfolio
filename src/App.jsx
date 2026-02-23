@@ -6,6 +6,7 @@ import ContactFloatingButton from './components/ContactFloatingButton';
 import VideoBackground from './components/VideoBackground';
 import HomePage from './pages/HomePage';
 import ProjectPage from './pages/ProjectPage';
+import EducationPage from './pages/EducationPage';
 
 const sectionRoutes = ['about', 'legal', 'events', 'marketing', 'certifications', 'contact'];
 
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects/:slug" element={<ProjectPage />} />
+          <Route path="/education/:slug" element={<EducationPage />} />
           {sectionRoutes.map((section) => (
             <Route
               key={section}
