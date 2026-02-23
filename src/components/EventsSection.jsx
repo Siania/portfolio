@@ -16,18 +16,31 @@ const cards = [
     tags: ['Advocacy', 'Nordic', 'CSOs', 'Ukraine', 'Summit'],
   },
   {
-    title: 'Marketing & Event Coordinator',
+    title: 'Fundraising & Partnerships',
     org: 'Ukrainalaisten yhdistys Suomessa',
     period: 'May 2024 – May 2025',
     highlight: '€100,000+',
     image: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80',
-    imageAlt: 'Community and cultural events',
+    imageAlt: 'Fundraising and community events',
     content: [
       'Fundraising campaign: raised €100,000+',
       'Partnerships: Helsingin Sanomat, Helsinki Book Fair, Maailma kylässä, Finnish Parliament',
-      'Logistics and community engagement for cultural and advocacy events',
+      'Kamina Keräys campaign, MobilePay, published in Ilta-Sanomat',
     ],
-    tags: ['Fundraising', '€100K+', 'Cultural Events', 'Government Relations', 'Helsinki'],
+    tags: ['Fundraising', '€100K+', 'Government Relations', 'Helsinki', 'Partnerships'],
+  },
+  {
+    title: 'Cultural Event Coordination',
+    org: 'Ukrainalaisten yhdistys Suomessa',
+    period: 'May 2024 – May 2025',
+    image: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80',
+    imageAlt: 'Cultural event at Helsinki Cathedral',
+    content: [
+      'Shchedryk Ukrainian Youth Choir concert at Helsinki Cathedral',
+      'Event logistics, venue coordination, promotion',
+      'Community engagement for cultural and advocacy events',
+    ],
+    tags: ['Cultural Events', 'Concert', 'Logistics', 'Community'],
   },
   {
     title: 'Info Team Volunteer',
@@ -76,7 +89,7 @@ export default function EventsSection({ asPage = false }) {
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
           {cards.map((card, i) => (
             <div
-              key={card.org + card.period}
+              key={i}
               className="glass-deep section-events reveal"
               style={{ padding: 0, borderRadius: 16, marginBottom: 20, position: 'relative', overflow: 'hidden' }}
             >

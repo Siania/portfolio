@@ -5,16 +5,43 @@ const cards = [
   {
     title: 'Digital Content Strategy',
     org: 'Ukrainalaisten yhdistys Suomessa',
-    highlight: '1.7M views on Facebook, 380K on Instagram',
+    period: 'May 2024 – May 2025',
+    highlight: '1.7M views on Facebook, 396K on Instagram',
     content: [
-      'Digital content strategy driving 1.7M views on Facebook, 380K on Instagram',
+      'Digital content strategy driving 1.7M views on Facebook, 396K on Instagram',
       'Community engagement and advocacy content',
+      'Targeted advertising, optimized posting schedule, interactive content',
     ],
     tags: ['Social Media', '1.7M Views', 'Facebook', 'Instagram', 'Content Strategy'],
   },
   {
+    title: 'Fundraising & Campaign Marketing',
+    org: 'Ukrainalaisten yhdistys Suomessa',
+    period: 'May 2024 – May 2025',
+    highlight: '€100,000+ raised',
+    content: [
+      'Kamina Keräys fundraising campaign',
+      'Published in Ilta-Sanomat newspaper',
+      'Presented at Helsingin Kirjamessut (Helsinki Book Fair)',
+      'MobilePay campaign coordination',
+    ],
+    tags: ['Fundraising', '€100K+', 'Kamina Keräys', 'Media', 'Partnerships'],
+  },
+  {
+    title: 'Visual & Brand Design',
+    org: 'Ukrainalaisten yhdistys Suomessa',
+    period: 'May 2024 – May 2025',
+    content: [
+      'Poster design for Shchedryk Ukrainian Youth Choir concert at Helsinki Cathedral',
+      'Movie posters and promotional materials for marketing campaigns',
+      'Brand visuals and social media graphics',
+    ],
+    tags: ['Poster Design', 'Branding', 'Visuals', 'UGC'],
+  },
+  {
     title: 'Marketing Coordination',
     org: 'VPEB Music',
+    period: 'Jun–Sep 2025',
     content: [
       'Coordinate event marketing campaigns',
       'Social media promotion schedules',
@@ -52,8 +79,11 @@ export default function MarketingSection({ asPage = false }) {
           {cards.map((card, i) => (
             <div key={i} className="glass-deep section-marketing reveal" style={{ padding: 28, borderRadius: 16, marginBottom: 20 }}>
               <h3 style={{ fontFamily: 'var(--font-accent)', fontSize: 18, fontWeight: 600, letterSpacing: '0.04em', marginBottom: 4 }}>{card.title} · {card.org}</h3>
+              {card.period && (
+                <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: card.highlight ? 8 : 12 }}>{card.period}</p>
+              )}
               {card.highlight && (
-                <p style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontStyle: 'italic', color: 'var(--cream)', marginBottom: 12 }}>{card.highlight}</p>
+                <p style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontStyle: 'italic', color: 'var(--accent-marketing)', marginBottom: 12 }}>{card.highlight}</p>
               )}
               <ul style={{ marginBottom: 16, paddingLeft: 20, color: 'var(--text-secondary)', lineHeight: 1.7 }}>
                 {card.content.map((line) => <li key={line}>{line}</li>)}
