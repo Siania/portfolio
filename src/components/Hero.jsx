@@ -25,15 +25,15 @@ export default function Hero({ ctaText = 'Explore My Work ↓', onCtaClick }) {
       <h1
         className="reveal reveal-header"
         style={{
-          fontFamily: 'var(--font-display)',
+          fontFamily: 'var(--font-accent)',
           fontSize: 'clamp(2.75rem, 9vw, 4.5rem)',
-          fontWeight: 600,
+          fontWeight: 700,
           marginBottom: 16,
           lineHeight: 1.08,
         }}
       >
-        <span style={{ fontStyle: 'italic' }}>Oksana</span>{' '}
-        <span style={{ fontStyle: 'normal' }}>Kozhan</span>
+        <span>Oksana</span>{' '}
+        <span>Kozhan</span>
       </h1>
 
       <p
