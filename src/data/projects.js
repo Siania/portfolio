@@ -108,6 +108,22 @@ export const eventProjects = {
 };
 
 export const marketingProjects = {
+  'kamina-kerays': {
+    slug: 'kamina-kerays',
+    section: 'marketing',
+    title: 'Campaign Design',
+    org: 'Ukrainalaisten yhdistys Suomessa',
+    period: '2024',
+    highlight: '€43,000 raised',
+    image: '/projects/kamina-kerays/campaign.png',
+    imageAlt: 'Kamina Keräys — stove fundraising campaign',
+    content: [
+      'Designed the Kamina Keräys (Stove Collection) fundraising campaign visual',
+      'Wood-burning stove imagery with snowy backdrop — warmth and resilience theme',
+      'MobilePay integration (27044), Ukrainalaisten yhdistys Suomessa branding with Ukrainian flag colors',
+    ],
+    tags: ['Fundraising', 'Campaign Design', 'Kamina Keräys', 'MobilePay', 'Ukraine'],
+  },
   'helsingin-kirjamessut': {
     slug: 'helsingin-kirjamessut',
     section: 'marketing',

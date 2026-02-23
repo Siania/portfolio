@@ -36,14 +36,13 @@ const marketingTypes = {
       {
         org: 'Ukrainalaisten yhdistys Suomessa',
         period: 'May 2024 – May 2025',
-        highlight: '€100,000+ raised',
         content: [
-          'Kamina Keräys fundraising campaign',
+          'Kamina Keräys fundraising campaign — €43,000 raised',
           'Published in Ilta-Sanomat newspaper',
           'Presented at Helsingin Kirjamessut (Helsinki Book Fair)',
           'MobilePay campaign coordination',
         ],
-        tags: ['Fundraising', '€100K+', 'Kamina Keräys', 'Media', 'Partnerships'],
+        tags: ['Fundraising', '€43K', 'Kamina Keräys', 'Media', 'Partnerships'],
       },
     ],
   },
@@ -181,6 +180,24 @@ export default function MarketingSection({ asPage = false }) {
 
           {/* Fundraising & Campaign Marketing */}
           <SubsectionHeader title={marketingTypes.fundraising.title} />
+          <Link
+            to="/projects/kamina-kerays"
+            className="glass-deep section-marketing reveal"
+            style={{ display: 'flex', alignItems: 'center', gap: 20, padding: 0, borderRadius: 16, marginBottom: 20, overflow: 'hidden', textDecoration: 'none', color: 'inherit' }}
+          >
+            <div style={{ width: 200, flexShrink: 0, aspectRatio: '16/9', overflow: 'hidden' }}>
+              <img
+                src="/projects/kamina-kerays/campaign.png"
+                alt="Kamina Keräys campaign design"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+            </div>
+            <div style={{ padding: 24, flex: 1 }}>
+              <strong style={{ fontFamily: 'var(--font-accent)', fontSize: 16, letterSpacing: '0.04em', display: 'block', marginBottom: 4 }}>Kamina Keräys</strong>
+              <p style={{ fontSize: 14, color: 'var(--text-secondary)', margin: 0 }}>Stove fundraising campaign — Ukrainalaisten yhdistys Suomessa</p>
+              <p style={{ fontSize: 13, color: 'var(--accent-marketing)', marginTop: 8 }}>View project →</p>
+            </div>
+          </Link>
           {marketingTypes.fundraising.cards.map((card, i) => (
             <div key={i} className="glass-deep section-marketing reveal" style={{ padding: 28, borderRadius: 16, marginBottom: 20 }}>
               <h4 style={{ fontFamily: 'var(--font-accent)', fontSize: 16, fontWeight: 600, letterSpacing: '0.04em', marginBottom: 4 }}>{card.org}</h4>
