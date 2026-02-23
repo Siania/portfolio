@@ -167,13 +167,9 @@ export default function EventsSection({ asPage = false }) {
           <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 16, textAlign: 'center' }}>
             Event Projects
           </p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16, maxWidth: 500, margin: '0 auto' }}>
-            {[1, 2].map((n) => (
-              <div key={n} role="button" tabIndex={0} onClick={openContactForm} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && openContactForm()} className="glass reveal" style={{ padding: 40, borderRadius: 16, border: '2px dashed color-mix(in srgb, var(--accent-events) 50%, transparent)', textAlign: 'center', cursor: 'pointer' }}>
-                <span style={{ fontSize: 32, color: 'var(--text-muted)' }}>+</span>
-                <p style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 8 }}>Add Event Project</p>
-              </div>
-            ))}
+          <div role="button" tabIndex={0} onClick={openContactForm} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && openContactForm()} className="glass reveal" style={{ padding: 40, borderRadius: 16, border: '2px dashed color-mix(in srgb, var(--accent-events) 50%, transparent)', textAlign: 'center', cursor: 'pointer', maxWidth: 200, margin: '0 auto' }}>
+            <span style={{ fontSize: 32, color: 'var(--text-muted)' }}>+</span>
+            <p style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 8 }}>Add Event Project</p>
           </div>
         </div>
       </section>

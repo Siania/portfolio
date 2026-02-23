@@ -152,13 +152,6 @@ export default function LegalSection({ asPage = false }) {
               <span style={{ fontSize: 13, color: 'var(--accent-legal)', marginTop: 12, display: 'inline-block' }}>Read article →</span>
             </a>
           ))}
-
-          <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 16, textAlign: 'center', marginTop: 32 }}>
-            Projects
-          </p>
-          <div className="glass reveal" style={{ padding: 32, borderRadius: 16, border: '2px dashed var(--glass-border)', textAlign: 'center' }}>
-            <p style={{ color: 'var(--text-muted)', margin: 0 }}>+ Add Legal Projects & Certifications</p>
-          </div>
         </div>
       </section>
     </>
