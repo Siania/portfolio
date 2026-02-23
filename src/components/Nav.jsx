@@ -65,6 +65,7 @@ export default function Nav() {
     };
     Object.assign(effectFilterRef.current.style, styles);
     Object.assign(effectTextRef.current.style, styles);
+    effectFilterRef.current.classList.add('positioned');
     effectTextRef.current.classList.remove('hidden');
   };
 

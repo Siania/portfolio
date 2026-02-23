@@ -157,6 +157,11 @@
   mix-blend-mode: lighten;
   position: fixed;
   overflow: visible;
+  visibility: hidden;
+}
+
+.effect.filter.positioned {
+  visibility: visible;
 }
 
 .effect.filter::before {
