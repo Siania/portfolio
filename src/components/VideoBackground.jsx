@@ -14,13 +14,17 @@ export default function VideoBackground() {
     if (!video) return;
 
     const handleError = () => setVisible(false);
-    const handleCanPlay = () => video.play().catch(() => {});
+    const playVideo = () => video.play().catch(() => {});
 
     video.addEventListener('error', handleError);
-    video.addEventListener('canplay', handleCanPlay);
+    video.addEventListener('canplay', playVideo);
+    video.addEventListener('loadeddata', playVideo);
+    // Try play immediately (muted videos autoplay in modern browsers)
+    playVideo();
     return () => {
       video.removeEventListener('error', handleError);
-      video.removeEventListener('canplay', handleCanPlay);
+      video.removeEventListener('canplay', playVideo);
+      video.removeEventListener('loadeddata', playVideo);
     };
   }, []);
 
@@ -35,6 +39,7 @@ export default function VideoBackground() {
         muted
         loop
         playsInline
+        preload="auto"
         disablePictureInPicture
       />
       <div className="video-background-overlay" />

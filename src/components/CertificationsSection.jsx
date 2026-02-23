@@ -6,7 +6,7 @@ const STORAGE_KEY = 'oksana-certifications';
 
 const initialCerts = [
   { id: '1', name: 'Bachelor of Law', institution: 'Ivan Franko National University of Lviv', year: '2023', link: '/certificates/bachelor-of-law.pdf' },
-  { id: '5', name: 'Oksana Kozhan Certificate', institution: 'Certificate', year: '—', link: '/certificates/oksana-kozhan-certificate.pdf' },
+  { id: '5', name: 'SMM Certification', institution: 'Certificate', year: '—', link: '/certificates/oksana-kozhan-certificate.pdf' },
   { id: '2', name: 'Exchange — Law', institution: 'University of Turku', year: '2023', link: '' },
   { id: '3', name: 'BBA (In Progress)', institution: 'Metropolia University of Applied Sciences', year: '2024–Current', link: '' },
   { id: '4', name: 'Business & Law Courses', institution: 'Aalto University Open University', year: '2022–Current', link: '' },
