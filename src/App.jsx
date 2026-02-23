@@ -5,6 +5,7 @@ import ThemeSwitcher from './components/ThemeSwitcher';
 import ContactFloatingButton from './components/ContactFloatingButton';
 import VideoBackground from './components/VideoBackground';
 import HomePage from './pages/HomePage';
+import ProjectPage from './pages/ProjectPage';
 
 const sectionRoutes = ['about', 'legal', 'events', 'marketing', 'certifications', 'contact'];
 
@@ -25,6 +26,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/projects/:slug" element={<ProjectPage />} />
           {sectionRoutes.map((section) => (
             <Route
               key={section}

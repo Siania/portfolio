@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
 import { useContactModal } from '../context/ContactModalContext';
 import GlassDivider from './GlassDivider';
@@ -139,6 +140,25 @@ export default function MarketingSection({ asPage = false }) {
             </div>
           </div>
 
+          <Link
+            to="/projects/helsingin-kirjamessut"
+            className="glass-deep section-marketing reveal"
+            style={{ display: 'flex', alignItems: 'center', gap: 20, padding: 0, borderRadius: 16, marginBottom: 24, overflow: 'hidden', textDecoration: 'none', color: 'inherit' }}
+          >
+            <div style={{ width: 200, flexShrink: 0, aspectRatio: '16/9', overflow: 'hidden' }}>
+              <img
+                src="/projects/helsingin-kirjamessut/presentation.png"
+                alt="Helsingin Kirjamessut presentation design"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+            </div>
+            <div style={{ padding: 24, flex: 1 }}>
+              <strong style={{ fontFamily: 'var(--font-accent)', fontSize: 16, letterSpacing: '0.04em', display: 'block', marginBottom: 4 }}>Helsingin Kirjamessut</strong>
+              <p style={{ fontSize: 14, color: 'var(--text-secondary)', margin: 0 }}>Presentation design — Preserving Memories for our Future</p>
+              <p style={{ fontSize: 13, color: 'var(--accent-marketing)', marginTop: 8 }}>View project →</p>
+            </div>
+          </Link>
+
           {/* Digital Content Strategy */}
           <SubsectionHeader title={marketingTypes.digitalContent.title} />
           {marketingTypes.digitalContent.cards.map((card, i) => (
@@ -146,7 +166,7 @@ export default function MarketingSection({ asPage = false }) {
               <h4 style={{ fontFamily: 'var(--font-accent)', fontSize: 16, fontWeight: 600, letterSpacing: '0.04em', marginBottom: 4 }}>{card.org}</h4>
               {card.period && <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: card.highlight ? 8 : 12 }}>{card.period}</p>}
               {card.highlight && (
-                <p style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontStyle: 'italic', color: 'var(--accent-marketing)', marginBottom: 12 }}>{card.highlight}</p>
+                <p style={{ fontFamily: 'var(--font-numbers)', fontSize: 24, fontWeight: 600, letterSpacing: '0.04em', color: 'var(--accent-marketing)', marginBottom: 12 }}>{card.highlight}</p>
               )}
               <ul style={{ marginBottom: 16, paddingLeft: 20, color: 'var(--text-secondary)', lineHeight: 1.7 }}>
                 {card.content.map((line) => <li key={line}>{line}</li>)}
@@ -166,7 +186,7 @@ export default function MarketingSection({ asPage = false }) {
               <h4 style={{ fontFamily: 'var(--font-accent)', fontSize: 16, fontWeight: 600, letterSpacing: '0.04em', marginBottom: 4 }}>{card.org}</h4>
               {card.period && <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: card.highlight ? 8 : 12 }}>{card.period}</p>}
               {card.highlight && (
-                <p style={{ fontFamily: 'var(--font-display)', fontSize: 24, fontStyle: 'italic', color: 'var(--accent-marketing)', marginBottom: 12 }}>{card.highlight}</p>
+                <p style={{ fontFamily: 'var(--font-numbers)', fontSize: 24, fontWeight: 600, letterSpacing: '0.04em', color: 'var(--accent-marketing)', marginBottom: 12 }}>{card.highlight}</p>
               )}
               <ul style={{ marginBottom: 16, paddingLeft: 20, color: 'var(--text-secondary)', lineHeight: 1.7 }}>
                 {card.content.map((line) => <li key={line}>{line}</li>)}

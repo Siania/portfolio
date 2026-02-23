@@ -117,10 +117,12 @@ export default function Hero({ ctaText = 'Explore My Work ↓', onCtaClick }) {
           { value: '4+', label: 'Languages Spoken' },
         ].map((stat) => (
           <div key={stat.label} className="glass glass-deep" style={{ padding: '20px 32px', borderRadius: 16 }}>
-            <div style={{ fontFamily: 'var(--font-accent)', fontSize: '1.5rem', fontWeight: 700, letterSpacing: '0.06em', marginBottom: 4 }}>
+            <div style={{ fontFamily: 'var(--font-numbers)', fontSize: '2rem', fontWeight: 600, letterSpacing: '0.06em', marginBottom: 6 }}>
               {stat.value}
             </div>
-            <div style={{ fontSize: 13, color: 'var(--text-muted)' }}>{stat.label}</div>
+            <div style={{ fontFamily: 'var(--font-accent)', fontSize: 12, fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>
+              {stat.label}
+            </div>
           </div>
         ))}
       </div>

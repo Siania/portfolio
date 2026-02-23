@@ -109,3 +109,11 @@
 [data-theme="light"] .theme-switcher::after { translate: 0 0; }
 [data-theme="dark"] .theme-switcher::after { translate: 28px 0; }
 [data-theme="dim"] .theme-switcher::after { translate: 56px 0; }
+
+@media (max-width: 640px) {
+  .theme-switcher {
+    top: 16px;
+    bottom: auto;
+    right: max(14px, env(safe-area-inset-right, 14px));
+  }
+}

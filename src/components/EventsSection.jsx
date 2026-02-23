@@ -1,13 +1,15 @@
+import { Link } from 'react-router-dom';
 import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
 import { useContactModal } from '../context/ContactModalContext';
 import GlassDivider from './GlassDivider';
 
 const cards = [
   {
+    slug: 'nordic-summit',
     title: 'Co-Organizer',
     org: 'Nordic Ukraine Advocacy Summit',
     period: '2025',
-    image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80',
+    image: '/projects/nordic-summit/group-hall.png',
     imageAlt: 'Nordic Ukraine Advocacy Summit',
     content: [
       'Co-organized a summit dedicated to fostering dialogue and strengthening advocacy efforts for Ukraine within the Nordic region',
@@ -17,6 +19,7 @@ const cards = [
     tags: ['Advocacy', 'Nordic', 'CSOs', 'Ukraine', 'Summit'],
   },
   {
+    slug: 'fundraising',
     title: 'Fundraising & Partnerships',
     org: 'Ukrainalaisten yhdistys Suomessa',
     period: 'May 2024 – May 2025',
@@ -31,6 +34,7 @@ const cards = [
     tags: ['Fundraising', '€100K+', 'Government Relations', 'Helsinki', 'Partnerships'],
   },
   {
+    slug: 'cultural-events',
     title: 'Cultural Event Coordination',
     org: 'Ukrainalaisten yhdistys Suomessa',
     period: 'May 2024 – May 2025',
@@ -44,26 +48,33 @@ const cards = [
     tags: ['Cultural Events', 'Concert', 'Logistics', 'Community'],
   },
   {
+    slug: 'slush',
     title: 'Info Team Volunteer',
     org: 'Slush',
     period: 'Nov 2025',
     image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80',
     imageAlt: 'Slush startup event',
-    content: ['Support for thousands of international attendees at world\'s leading startup event'],
+    content: [
+      'Info team volunteer at Slush 2025 — world\'s leading founder-focused startup event',
+      'Guided hundreds of international attendees, critical problem solving, AI-tools for customer support',
+      'Process improvement and feedback for 1,600 person event',
+    ],
     tags: ['Slush', 'Startup', 'International', 'Volunteer'],
   },
   {
+    slug: 'vpeb-music',
     title: 'Marketing Lead',
     org: 'VPEB Music',
     period: 'Jun–Sep 2025',
-    image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&q=80',
-    imageAlt: 'Music event',
+    image: '/projects/vpeb-music/live-show.png',
+    imageAlt: 'Your Mother, Always live acoustic show',
     content: [
       'Event marketing campaigns, social media schedules, sponsor communication, ticketing',
     ],
     tags: ['Music Events', 'Ticketing', 'Sponsor Relations'],
   },
   {
+    slug: 'lawyers-association',
     title: 'Event & Content Manager',
     org: 'Association of Lawyers of Ukraine',
     period: 'Sep 2019 – Dec 2022',
@@ -90,10 +101,20 @@ export default function EventsSection({ asPage = false }) {
 
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
           {cards.map((card, i) => (
-            <div
-              key={i}
+            <Link
+              key={card.slug}
+              to={`/projects/${card.slug}`}
               className="glass-deep section-events reveal"
-              style={{ padding: 0, borderRadius: 16, marginBottom: 20, position: 'relative', overflow: 'hidden' }}
+              style={{
+                padding: 0,
+                borderRadius: 16,
+                marginBottom: 20,
+                position: 'relative',
+                overflow: 'hidden',
+                display: 'block',
+                textDecoration: 'none',
+                color: 'inherit',
+              }}
             >
               <div style={{ width: '100%', height: 200, overflow: 'hidden', marginBottom: 0 }}>
                 <img
@@ -116,7 +137,7 @@ export default function EventsSection({ asPage = false }) {
                 {card.period}
               </p>
               {card.highlight && (
-                <p style={{ fontFamily: 'var(--font-display)', fontSize: 28, fontStyle: 'italic', color: 'var(--accent-events)', marginBottom: 16 }}>
+                <p style={{ fontFamily: 'var(--font-numbers)', fontSize: 28, fontWeight: 600, letterSpacing: '0.04em', color: 'var(--accent-events)', marginBottom: 16 }}>
                   {card.highlight}
                 </p>
               )}
@@ -132,8 +153,9 @@ export default function EventsSection({ asPage = false }) {
                   </span>
                 ))}
               </div>
+              <p style={{ marginTop: 12, fontSize: 13, color: 'var(--accent-events)' }}>View project →</p>
               </div>
-            </div>
+            </Link>
           ))}
 
           <div className="glass glass-deep reveal" style={{ padding: 24, borderRadius: 16, textAlign: 'center', marginBottom: 32, borderColor: 'color-mix(in srgb, var(--accent-events) 40%, transparent)' }}>

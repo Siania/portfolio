@@ -21,19 +21,10 @@ export default function CertificationsSection({ asPage = false }) {
     } catch (e) {}
     return initialCerts;
   });
-  const [showModal, setShowModal] = useState(false);
-  const [form, setForm] = useState({ name: '', institution: '', year: '', link: '' });
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(certs));
   }, [certs]);
-
-  const addCert = () => {
-    if (!form.name.trim()) return;
-    setCerts((prev) => [...prev, { ...form, id: Date.now().toString() }]);
-    setForm({ name: '', institution: '', year: '', link: '' });
-    setShowModal(false);
-  };
 
   return (
     <>
@@ -81,56 +72,7 @@ export default function CertificationsSection({ asPage = false }) {
               )}
             </div>
           ))}
-          <div
-            className="glass reveal"
-            style={{
-              padding: 40,
-              borderRadius: 16,
-              border: '2px dashed var(--glass-border)',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer',
-            }}
-            onClick={() => setShowModal(true)}
-          >
-            <span style={{ fontSize: 36, color: 'var(--text-muted)', marginBottom: 12 }}>+</span>
-            <p style={{ fontSize: 14, color: 'var(--text-muted)' }}>Add Certification</p>
-          </div>
         </div>
-
-        {showModal && (
-          <div
-            style={{
-              position: 'fixed',
-              inset: 0,
-              zIndex: 300,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              background: 'rgba(0,0,0,0.6)',
-              backdropFilter: 'blur(8px)',
-            }}
-            onClick={() => setShowModal(false)}
-          >
-            <div
-              className="glass-deep"
-              style={{ padding: 32, borderRadius: 20, maxWidth: 400, width: '90%' }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <h3 style={{ marginBottom: 20, fontFamily: 'var(--font-accent)', fontWeight: 600, letterSpacing: '0.04em' }}>Add Certification</h3>
-              <input className="glass-input" placeholder="Certificate Name" value={form.name} onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))} style={{ marginBottom: 12 }} />
-              <input className="glass-input" placeholder="Institution" value={form.institution} onChange={(e) => setForm((f) => ({ ...f, institution: e.target.value }))} style={{ marginBottom: 12 }} />
-              <input className="glass-input" placeholder="Year" value={form.year} onChange={(e) => setForm((f) => ({ ...f, year: e.target.value }))} style={{ marginBottom: 12 }} />
-              <input className="glass-input" placeholder="Link (optional)" value={form.link} onChange={(e) => setForm((f) => ({ ...f, link: e.target.value }))} style={{ marginBottom: 20 }} />
-              <div style={{ display: 'flex', gap: 12 }}>
-                <button className="glass pill" style={{ padding: '12px 24px', cursor: 'pointer', border: 'none', color: 'inherit', flex: 1 }} onClick={() => setShowModal(false)}>Cancel</button>
-                <button className="glass pill" style={{ padding: '12px 24px', cursor: 'pointer', border: 'none', color: 'inherit', flex: 1, borderColor: 'var(--accent-neutral)', boxShadow: '0 0 20px color-mix(in srgb, var(--accent-neutral) 25%, transparent)' }} onClick={addCert}>Add</button>
-              </div>
-            </div>
-          </div>
-        )}
       </section>
     </>
   );
