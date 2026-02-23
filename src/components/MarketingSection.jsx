@@ -1,4 +1,5 @@
 import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
+import { useContactModal } from '../context/ContactModalContext';
 import GlassDivider from './GlassDivider';
 
 const marketingTypes = {
@@ -103,6 +104,7 @@ function SubsectionHeader({ title, subtitle, first }) {
 
 export default function MarketingSection({ asPage = false }) {
   const [ref, isVisible] = useRevealOnScroll();
+  const { openContactForm } = useContactModal();
 
   return (
     <>
@@ -236,7 +238,7 @@ export default function MarketingSection({ asPage = false }) {
           <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 16, textAlign: 'center' }}>Marketing Projects</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16, maxWidth: 500, margin: '0 auto' }}>
             {[1, 2].map((n) => (
-              <div key={n} className="glass reveal" style={{ padding: 40, borderRadius: 16, border: '2px dashed var(--glass-border)', textAlign: 'center', cursor: 'pointer' }}>
+              <div key={n} role="button" tabIndex={0} onClick={openContactForm} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && openContactForm()} className="glass reveal" style={{ padding: 40, borderRadius: 16, border: '2px dashed var(--glass-border)', textAlign: 'center', cursor: 'pointer' }}>
                 <span style={{ fontSize: 32, color: 'var(--text-muted)' }}>+</span>
                 <p style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 8 }}>Add Marketing Project</p>
               </div>

@@ -1,12 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import ContactForm from './ContactForm';
+import { useContactModal } from '../context/ContactModalContext';
 
 export default function ContactFloatingButton() {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, openContactForm, closeContactForm } = useContactModal();
 
   useEffect(() => {
     if (!isOpen) return;
-    const handler = (e) => e.key === 'Escape' && setIsOpen(false);
+    const handler = (e) => e.key === 'Escape' && closeContactForm();
     document.addEventListener('keydown', handler);
     return () => document.removeEventListener('keydown', handler);
   }, [isOpen]);
@@ -15,7 +16,7 @@ export default function ContactFloatingButton() {
     <>
       <button
         type="button"
-        onClick={() => setIsOpen(true)}
+        onClick={openContactForm}
         className="contact-fab glass pill"
         aria-label="Open contact form"
       >
@@ -28,7 +29,7 @@ export default function ContactFloatingButton() {
       {isOpen && (
         <div
           className="contact-modal-overlay"
-          onClick={() => setIsOpen(false)}
+          onClick={closeContactForm}
           role="presentation"
         >
           <div
@@ -41,7 +42,7 @@ export default function ContactFloatingButton() {
               </h2>
               <button
                 type="button"
-                onClick={() => setIsOpen(false)}
+                onClick={closeContactForm}
                 aria-label="Close"
                 style={{
                   background: 'none',
@@ -56,7 +57,7 @@ export default function ContactFloatingButton() {
                 ×
               </button>
             </div>
-            <ContactForm compact onSuccess={() => setIsOpen(false)} />
+            <ContactForm compact onSuccess={closeContactForm} />
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 20, justifyContent: 'center' }}>
               <a href="mailto:oksana.kozhan.fi@gmail.com" className="glass pill tag-chip" style={{ padding: '10px 16px', textDecoration: 'none', color: 'inherit', fontSize: 13 }}>
                 Email

@@ -252,6 +252,35 @@ body {
 .glass-deep.section-events:hover { box-shadow: 0 12px 60px var(--glass-shadow-dark), inset 0 2px 0 var(--glass-highlight), var(--glow-events); }
 .glass-deep.section-marketing:hover { box-shadow: 0 12px 60px var(--glass-shadow-dark), inset 0 2px 0 var(--glass-highlight), var(--glow-marketing); }
 
+/* Video background - portalled to body, behind all content */
+.video-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.video-background video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-background-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--bg-base) 45%, transparent) 0%,
+    color-mix(in srgb, var(--bg-base) 30%, transparent) 50%,
+    color-mix(in srgb, var(--bg-base) 50%, transparent) 100%
+  );
+  transition: background 400ms;
+}
+
 /* Animated gradient blobs */
 @keyframes blobFloat1 {
   0%, 100% { transform: translate(0, 0) scale(1); }
