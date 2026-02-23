@@ -253,6 +253,20 @@ body {
 .glass-deep.section-events:hover { box-shadow: 0 12px 60px var(--glass-shadow-dark), inset 0 2px 0 var(--glass-highlight), var(--glow-events); }
 .glass-deep.section-marketing:hover { box-shadow: 0 12px 60px var(--glass-shadow-dark), inset 0 2px 0 var(--glass-highlight), var(--glow-marketing); }
 
+/* Add project CTA — inviting, clickable */
+.add-project-cta {
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, background-color 0.2s;
+}
+.add-project-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px var(--glass-shadow-dark), var(--glow-marketing) !important;
+  border-color: color-mix(in srgb, var(--accent-marketing) 70%, transparent) !important;
+  background-color: color-mix(in srgb, var(--accent-marketing) 18%, transparent) !important;
+}
+.add-project-cta:active {
+  transform: translateY(0);
+}
+
 /* Video background - portalled to body, behind all content */
 .video-background {
   position: fixed;

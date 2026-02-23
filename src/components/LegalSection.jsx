@@ -147,10 +147,7 @@ export default function LegalSection({ asPage = false }) {
             Projects
           </p>
           <div className="glass reveal" style={{ padding: 32, borderRadius: 16, border: '2px dashed var(--glass-border)', textAlign: 'center' }}>
-            <p style={{ color: 'var(--text-muted)', marginBottom: 12 }}>+ Add Legal Projects & Certifications</p>
-            <div className="glass" style={{ padding: 24, borderRadius: 12, border: '2px dashed var(--glass-border-muted)', display: 'inline-block' }}>
-              Client Case Study — coming soon
-            </div>
+            <p style={{ color: 'var(--text-muted)', margin: 0 }}>+ Add Legal Projects & Certifications</p>
           </div>
         </div>
       </section>

@@ -273,13 +273,27 @@ export default function MarketingSection({ asPage = false }) {
           </div>
 
           <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 16, textAlign: 'center' }}>Marketing Projects</p>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 16, maxWidth: 500, margin: '0 auto' }}>
-            {[1, 2].map((n) => (
-              <div key={n} role="button" tabIndex={0} onClick={openContactForm} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && openContactForm()} className="glass reveal" style={{ padding: 40, borderRadius: 16, border: '2px dashed var(--glass-border)', textAlign: 'center', cursor: 'pointer' }}>
-                <span style={{ fontSize: 32, color: 'var(--text-muted)' }}>+</span>
-                <p style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 8 }}>Add Marketing Project</p>
-              </div>
-            ))}
+          <div
+            role="button"
+            tabIndex={0}
+            onClick={openContactForm}
+            onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && openContactForm()}
+            className="glass reveal add-project-cta"
+            style={{
+              padding: 28,
+              borderRadius: 16,
+              border: '2px solid color-mix(in srgb, var(--accent-marketing) 50%, transparent)',
+              backgroundColor: 'color-mix(in srgb, var(--accent-marketing) 12%, transparent)',
+              textAlign: 'center',
+              cursor: 'pointer',
+              maxWidth: 260,
+              margin: '0 auto',
+              boxShadow: '0 8px 32px var(--glass-shadow-dark), 0 0 0 1px color-mix(in srgb, var(--accent-marketing) 15%, transparent)',
+            }}
+          >
+            <span style={{ fontSize: 28, color: 'var(--accent-marketing)', fontWeight: 700 }}>+</span>
+            <p style={{ fontSize: 15, color: 'var(--text-primary)', marginTop: 8, fontWeight: 600 }}>Add Marketing Project</p>
+            <p style={{ fontSize: 13, color: 'var(--accent-marketing)', marginTop: 4 }}>Got a project? Let's connect →</p>
           </div>
         </div>
       </section>
