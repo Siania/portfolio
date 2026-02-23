@@ -10,7 +10,7 @@ export default function ContactFloatingButton() {
     const handler = (e) => e.key === 'Escape' && closeContactForm();
     document.addEventListener('keydown', handler);
     return () => document.removeEventListener('keydown', handler);
-  }, [isOpen]);
+  }, [isOpen, closeContactForm]);
 
   return (
     <>

@@ -14,11 +14,13 @@ const initialCerts = [
 
 export default function CertificationsSection({ asPage = false }) {
   const [ref, isVisible] = useRevealOnScroll();
-  const [certs, setCerts] = useState(() => {
+  const [certs] = useState(() => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
       if (stored) return JSON.parse(stored);
-    } catch (e) {}
+    } catch {
+      /* ignore parse errors */
+    }
     return initialCerts;
   });
 

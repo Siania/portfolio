@@ -4,7 +4,7 @@ const TYPE_DELAY = 80;
 const ERASE_DELAY = 40;
 const PAUSE_BETWEEN = 1500;
 
-export function useTypewriter(words, loop = true) {
+export function useTypewriter(words) {
   const [displayText, setDisplayText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);

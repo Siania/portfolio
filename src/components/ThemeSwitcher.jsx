@@ -39,7 +39,9 @@ export default function ThemeSwitcher() {
     document.documentElement.dataset.theme = theme;
     try {
       localStorage.setItem(THEME_KEY, theme);
-    } catch {}
+    } catch {
+      /* ignore localStorage errors */
+    }
   }, [theme]);
 
   const handleChange = (value) => {
@@ -50,20 +52,23 @@ export default function ThemeSwitcher() {
   return (
     <fieldset className="theme-switcher" data-previous={previous}>
       <legend className="theme-switcher__legend">Choose theme</legend>
-      {options.map(({ value, label, cOption, Icon }) => (
-        <label key={value} className="theme-switcher__option">
-          <input
-            className="theme-switcher__input"
-            type="radio"
-            name="theme"
-            value={value}
-            data-c-option={cOption}
-            checked={theme === value}
-            onChange={() => handleChange(value)}
-          />
-          <Icon />
-        </label>
-      ))}
+      {options.map((opt) => {
+        const Icon = opt.Icon;
+        return (
+          <label key={opt.value} className="theme-switcher__option">
+            <input
+              className="theme-switcher__input"
+              type="radio"
+              name="theme"
+              value={opt.value}
+              data-c-option={opt.cOption}
+              checked={theme === opt.value}
+              onChange={() => handleChange(opt.value)}
+            />
+            <Icon />
+          </label>
+        );
+      })}
     </fieldset>
   );
 }

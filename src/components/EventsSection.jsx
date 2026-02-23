@@ -100,7 +100,7 @@ export default function EventsSection({ asPage = false }) {
         </div>
 
         <div style={{ maxWidth: 760, margin: '0 auto' }}>
-          {cards.map((card, i) => (
+          {cards.map((card) => (
             <Link
               key={card.slug}
               to={`/projects/${card.slug}`}
