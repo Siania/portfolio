@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oksanakozhan.vercel.app/sitemap.xml

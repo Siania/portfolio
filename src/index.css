@@ -360,6 +360,7 @@ section {
 .hero-section {
   scroll-margin-top: 0;
 }
+
 section[id] {
   scroll-margin-top: 70px;
 }
