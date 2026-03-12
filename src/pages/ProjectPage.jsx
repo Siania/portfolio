@@ -144,17 +144,17 @@ export default function ProjectPage() {
             ))}
           </div>
 
-          {(project.website || project.linkedIn) && (
+          {(project.url || project.linkedIn) && (
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
-              {project.website && (
+              {project.url && (
                 <a
-                  href={project.website}
+                  href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="glass pill"
                   style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '12px 20px', textDecoration: 'none', color: 'inherit', fontSize: 14 }}
                 >
-                  Visit {project.org} →
+                  Visit website →
                 </a>
               )}
               {project.linkedIn && (

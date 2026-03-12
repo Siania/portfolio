@@ -1,19 +1,4 @@
 export const eventProjects = {
-  'young-fashion-show': {
-    slug: 'young-fashion-show',
-    title: 'Business Assistant & Partnerships Coordinator',
-    org: 'Young Fashion Show',
-    period: '2025 – Current',
-    image: '/projects/young-fashion-show/banner.png',
-    imageAlt: 'Oksana Kozhan — Business Assistant & Partnerships Coordinator at Young Fashion Show',
-    website: 'https://www.youngfashionshow.com',
-    content: [
-      'Supporting business operations and partnership development for a global runway fashion tour for kids & teens ages 3–18',
-      'Coordinating with designers, talent agencies, and sponsors across US cities (Miami, LA, Chicago, New York)',
-      'Contributing to event logistics, participant outreach, and partnership communications',
-    ],
-    tags: ['Partnerships', 'Event Management', 'Fashion', 'Kids & Teens', 'Business Development'],
-  },
   slush: {
     slug: 'slush',
     title: 'Info Team Volunteer',
@@ -35,6 +20,21 @@ export const eventProjects = {
     signatory: 'Elina Laurila, Head of People',
     location: 'Helsinki, Finland, 11.12.2025',
     tags: ['Slush', 'Startup', 'International', 'Volunteer', 'Customer Service', 'AI Tools'],
+  },
+  'young-fashion-show': {
+    slug: 'young-fashion-show',
+    title: 'Business Assistant & Partnerships Coordinator',
+    org: 'Young Fashion Show',
+    period: '2025–Current',
+    url: 'https://www.youngfashionshow.com',
+    image: '/projects/young-fashion-show/banner.png',
+    imageAlt: 'Young Fashion Show — Oksana Kozhan, Business Assistant & Partnerships Coordinator',
+    content: [
+      'Business support and partnerships coordination at YFS — the global runway fashion tour for kids and teens ages 3–18',
+      'Collaboration with modeling schools, talent agencies, designers, and brands across the U.S.',
+      'Support for large-scale fashion events in Miami, LA, Chicago, New York, and other cities',
+    ],
+    tags: ['Partnerships', 'Fashion Events', 'Kids & Teens', 'Event Coordination', 'Business Development'],
   },
   'nordic-summit': {
     slug: 'nordic-summit',
