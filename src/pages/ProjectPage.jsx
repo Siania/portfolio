@@ -144,16 +144,31 @@ export default function ProjectPage() {
             ))}
           </div>
 
-          {project.linkedIn && (
-            <a
-              href={project.linkedIn}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass pill"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '12px 20px', textDecoration: 'none', color: 'inherit', fontSize: 14 }}
-            >
-              Read full post on LinkedIn →
-            </a>
+          {(project.website || project.linkedIn) && (
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+              {project.website && (
+                <a
+                  href={project.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass pill"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '12px 20px', textDecoration: 'none', color: 'inherit', fontSize: 14 }}
+                >
+                  Visit {project.org} →
+                </a>
+              )}
+              {project.linkedIn && (
+                <a
+                  href={project.linkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass pill"
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '12px 20px', textDecoration: 'none', color: 'inherit', fontSize: 14 }}
+                >
+                  Read full post on LinkedIn →
+                </a>
+              )}
+            </div>
           )}
         </div>
       </div>

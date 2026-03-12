@@ -5,6 +5,19 @@ import GlassDivider from './GlassDivider';
 
 const cards = [
   {
+    slug: 'young-fashion-show',
+    title: 'Business Assistant & Partnerships Coordinator',
+    org: 'Young Fashion Show',
+    period: '2025 – Current',
+    image: '/projects/young-fashion-show/banner.png',
+    imageAlt: 'Oksana Kozhan — Business Assistant & Partnerships Coordinator at Young Fashion Show',
+    content: [
+      'Supporting business operations and partnership development for a global runway fashion tour for kids & teens ages 3–18',
+      'Coordinating with designers, talent agencies, and sponsors across US cities',
+    ],
+    tags: ['Partnerships', 'Event Management', 'Fashion', 'Kids & Teens'],
+  },
+  {
     slug: 'nordic-summit',
     title: 'Co-Organizer',
     org: 'Nordic Ukraine Advocacy Summit',
