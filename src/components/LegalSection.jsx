@@ -51,6 +51,12 @@ const skills = [
 
 const articles = [
   {
+    title: 'Can Defence Companies Be Essential Entities Under the NIS2 Directive?',
+    url: 'https://legalitgroup.com/chy-mozhut-oboronni-kompaniyi-buty-essential-entities-za-dyrektyvoyu-nis2/',
+    org: 'Legal IT Group',
+    tags: ['NIS2', 'Essential Entities', 'Defence', 'Data Privacy Compliance'],
+  },
+  {
     title: 'Key Data Privacy Regulations in the USA: From CCPA to HIPAA in 2026',
     url: 'https://legalitgroup.com/klyuchovi-regulyuvannya-zahystu-personalnyh-danyh-v-ssha-vid-ccpa-do-hipaa-u-2026-roczi/',
     org: 'Legal IT Group',
