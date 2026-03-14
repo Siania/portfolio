@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { ContactModalProvider } from './context/ContactModalContext';
 import Nav from './components/Nav';
 import ThemeSwitcher from './components/ThemeSwitcher';
@@ -38,6 +39,7 @@ function App() {
           ))}
         </Routes>
       </main>
+      <Analytics />
     </>
     </ContactModalProvider>
   );

@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react';
 import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
 import GlassDivider from './GlassDivider';
 
-const STORAGE_KEY = 'oksana-certifications-v2';
+const STORAGE_KEY = 'oksana-certifications-v3';
 
 const initialCerts = [
   { id: '1', name: 'Bachelor of Law', institution: 'Ivan Franko National University of Lviv', year: '2023', link: '/certificates/bachelor-of-law.pdf' },
+  { id: '6', name: 'Foundations of Digital Marketing and E-commerce', institution: 'Google (Coursera)', year: '2026', link: 'https://coursera.org/share/98f260f4579c3bb183314a0536ec4f03' },
   { id: '5', name: 'SMM Certification', institution: 'Certificate', year: '—', link: '/certificates/oksana-kozhan-certificate.pdf' },
   { id: '2', name: 'Exchange — Law', institution: 'University of Turku', year: '2023', link: '' },
   { id: '3', name: 'BBA (In Progress)', institution: 'Metropolia University of Applied Sciences', year: '2024–Current', link: '' },
