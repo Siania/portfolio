@@ -51,6 +51,12 @@ const skills = [
 
 const articles = [
   {
+    title: 'Video Surveillance vs. Privacy: GDPR Rules for Your Cameras',
+    url: 'https://legalitgroup.com/videonaglyad-proty-konfidenczijnosti-pravyla-gdpr-dlya-vashyh-kamer/',
+    org: 'Legal IT Group',
+    tags: ['GDPR', 'Video Surveillance', 'Data Privacy Compliance'],
+  },
+  {
     title: 'Can Defence Companies Be Essential Entities Under the NIS2 Directive?',
     url: 'https://legalitgroup.com/chy-mozhut-oboronni-kompaniyi-buty-essential-entities-za-dyrektyvoyu-nis2/',
     org: 'Legal IT Group',
