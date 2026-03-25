@@ -29,7 +29,10 @@ export const eventProjects = {
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=85',
     imageAlt: 'ATAS — Partner Relations and Success Manager',
     content: [
-      'Partner relations and success management at ATAS',
+      'Deliver a consistently high level of service and support to partners',
+      'Build and nurture long-term partner relationships with clear information, guidance, and follow-through',
+      'Shape sales-growth and efficiency initiatives aligned with leadership direction, grounded in internal performance data',
+      'Keep internal systems, reporting, and documentation accurate and up to date',
     ],
     tags: ['Partnerships', 'Success Management'],
   },
