@@ -5,10 +5,22 @@ import GlassDivider from './GlassDivider';
 
 const cards = [
   {
+    slug: 'atas',
+    title: 'Partner Relations and Success Manager',
+    org: 'ATAS',
+    period: '2026–Current',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
+    imageAlt: 'ATAS',
+    content: [
+      'Partner relations and success management',
+    ],
+    tags: ['Partnerships', 'Success Management'],
+  },
+  {
     slug: 'young-fashion-show',
     title: 'Business Assistant & Partnerships Coordinator',
     org: 'Young Fashion Show',
-    period: '2025–Current',
+    period: 'Jan 2026 (1 month)',
     image: '/projects/young-fashion-show/banner.png',
     imageAlt: 'Young Fashion Show',
     content: [

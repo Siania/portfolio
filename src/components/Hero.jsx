@@ -1,7 +1,7 @@
 import { useTypewriter } from '../hooks/useTypewriter';
 import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
 
-const roles = ['Junior Privacy Lawyer', 'Event Manager', 'Marketing Strategist', 'BBA Student'];
+const roles = ['Privacy Lawyer', 'Event Manager', 'Marketing Strategist', 'BBA Student'];
 
 export default function Hero({ ctaText = 'Explore My Work ↓', onCtaClick }) {
   const displayRole = useTypewriter(roles);

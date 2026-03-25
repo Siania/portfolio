@@ -3,7 +3,7 @@ import GlassDivider from './GlassDivider';
 
 const cards = [
   {
-    title: 'Junior Privacy Lawyer',
+    title: 'Privacy Lawyer',
     org: 'Legal IT Group',
     period: 'Sep 2025 – Present',
     content: [
