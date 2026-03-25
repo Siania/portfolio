@@ -26,11 +26,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://oksanakozhan.vercel.app/projects/cultural-events</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://oksanakozhan.vercel.app/projects/vpeb-music</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

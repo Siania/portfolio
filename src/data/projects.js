@@ -88,20 +88,6 @@ export const eventProjects = {
     ],
     tags: ['Fundraising', '€100K+', 'Government Relations', 'Helsinki', 'Partnerships'],
   },
-  'cultural-events': {
-    slug: 'cultural-events',
-    title: 'Cultural Event Coordination',
-    org: 'Ukrainalaisten yhdistys Suomessa',
-    period: 'May 2024 – May 2025',
-    image: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=1200&q=85',
-    imageAlt: 'Cultural event at Helsinki Cathedral',
-    content: [
-      'Shchedryk Ukrainian Youth Choir concert at Helsinki Cathedral',
-      'Event logistics, venue coordination, promotion',
-      'Community engagement for cultural and advocacy events',
-    ],
-    tags: ['Cultural Events', 'Concert', 'Logistics', 'Community'],
-  },
   'vpeb-music': {
     slug: 'vpeb-music',
     title: 'Marketing Lead',
