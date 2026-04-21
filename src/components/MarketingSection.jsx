@@ -85,8 +85,18 @@ const academic = [
 ];
 
 const tools = [
-  'Canva', 'Midjourney', 'DALL-E', 'Kling', 'Runway', 'Social Analytics',
-  'MS Office Suite', 'Meta Business', 'Community Management',
+  'Google Analytics 4',
+  'Google Ads',
+  'Meta Business Suite',
+  'Canva',
+  'Figma',
+  'Mailchimp',
+  'SEMrush',
+  'Jira',
+  'Trello',
+  'Notion',
+  'Microsoft 365',
+  'ChatGPT',
 ];
 
 function SubsectionHeader({ title, subtitle, first }) {
