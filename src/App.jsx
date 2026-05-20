@@ -34,7 +34,7 @@ function App() {
             <Route
               key={section}
               path={`/${section}`}
-              element={<Navigate to={`/#${section}`} replace />}
+              element={<Navigate to={{ pathname: '/', hash: section }} replace />}
             />
           ))}
         </Routes>

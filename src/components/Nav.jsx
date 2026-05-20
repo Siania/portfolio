@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { useActiveSection } from '../hooks/useIntersectionObserver';
 
 const links = [
@@ -10,14 +11,23 @@ const links = [
   { id: 'contact', label: 'CONTACT' },
 ];
 
-function scrollToSection(id) {
-  const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  window.history.replaceState(null, '', id === 'hero' ? '/' : `/#${id}`);
-}
-
 export default function Nav() {
+  const navigate = useNavigate();
   const activeSection = useActiveSection();
+
+  const goToSection = (id) => {
+    if (id === 'hero') {
+      navigate('/', { replace: true });
+      requestAnimationFrame(() => {
+        document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      return;
+    }
+    navigate({ pathname: '/', hash: id }, { replace: true });
+    requestAnimationFrame(() => {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  };
 
   return (
     <nav className="nav-frosted" aria-label="Main navigation">
@@ -28,11 +38,11 @@ export default function Nav() {
             <li key={id} className={isActive ? 'active' : ''}>
               <button
                 type="button"
-                onClick={() => scrollToSection(id)}
+                onClick={() => goToSection(id)}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
-                    scrollToSection(id);
+                    goToSection(id);
                   }
                 }}
                 style={{

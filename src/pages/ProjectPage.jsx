@@ -5,7 +5,7 @@ export default function ProjectPage() {
   const { slug } = useParams();
   const project = eventProjects[slug] || marketingProjects[slug];
   const section = project?.section || 'events';
-  const backHref = `/#${section}`;
+  const backTo = { pathname: '/', hash: section };
   const backLabel = section === 'marketing' ? 'Back to Marketing' : 'Back to Events';
   const sectionClass = section === 'marketing' ? 'section-marketing' : 'section-events';
   const accentBorder = section === 'marketing' ? 'color-mix(in srgb, var(--accent-marketing) 50%, transparent)' : 'color-mix(in srgb, var(--accent-events) 50%, transparent)';
@@ -14,7 +14,7 @@ export default function ProjectPage() {
     return (
       <div className="scroll-container" style={{ padding: 100, textAlign: 'center' }}>
         <h2>Project not found</h2>
-        <Link to="/#events" className="glass pill" style={{ display: 'inline-block', marginTop: 24, padding: '12px 24px', textDecoration: 'none', color: 'inherit' }}>
+        <Link to={{ pathname: '/', hash: 'events' }} className="glass pill" style={{ display: 'inline-block', marginTop: 24, padding: '12px 24px', textDecoration: 'none', color: 'inherit' }}>
           ← Back to Events
         </Link>
       </div>
@@ -24,7 +24,7 @@ export default function ProjectPage() {
   return (
     <div className="scroll-container" style={{ paddingTop: 100, paddingBottom: 100 }}>
       <div style={{ maxWidth: 720, margin: '0 auto' }}>
-        <Link to={backHref} className="glass pill" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 32, padding: '10px 20px', textDecoration: 'none', color: 'inherit', fontSize: 14 }}>
+        <Link to={backTo} className="glass pill" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 32, padding: '10px 20px', textDecoration: 'none', color: 'inherit', fontSize: 14 }}>
           ← {backLabel}
         </Link>
 

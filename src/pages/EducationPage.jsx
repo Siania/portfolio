@@ -9,7 +9,7 @@ export default function EducationPage() {
     return (
       <div className="scroll-container" style={{ paddingTop: 100, paddingBottom: 100 }}>
         <div style={{ maxWidth: 640, margin: '0 auto' }}>
-          <Link to="/#about" className="glass pill" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 32, padding: '10px 20px', textDecoration: 'none', color: 'inherit', fontSize: 14 }}>
+          <Link to={{ pathname: '/', hash: 'about' }} className="glass pill" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 32, padding: '10px 20px', textDecoration: 'none', color: 'inherit', fontSize: 14 }}>
             ← Back to About
           </Link>
           <div className="glass-deep section-legal" style={{ padding: 32, borderRadius: 20, borderLeft: '4px solid var(--accent-legal)' }}>
@@ -32,7 +32,7 @@ export default function EducationPage() {
     return (
       <div className="scroll-container" style={{ paddingTop: 100, paddingBottom: 100 }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
-          <Link to="/#about" className="glass pill" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 32, padding: '10px 20px', textDecoration: 'none', color: 'inherit', fontSize: 14 }}>
+          <Link to={{ pathname: '/', hash: 'about' }} className="glass pill" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 32, padding: '10px 20px', textDecoration: 'none', color: 'inherit', fontSize: 14 }}>
             ← Back to About
           </Link>
           <div className="glass-deep section-legal" style={{ padding: 32, borderRadius: 20, borderLeft: '4px solid var(--accent-legal)', marginBottom: 24 }}>
@@ -66,7 +66,7 @@ export default function EducationPage() {
   return (
     <div className="scroll-container" style={{ padding: 100, textAlign: 'center' }}>
       <h2>Not found</h2>
-      <Link to="/#about" className="glass pill" style={{ display: 'inline-block', marginTop: 24, padding: '12px 24px', textDecoration: 'none', color: 'inherit' }}>
+      <Link to={{ pathname: '/', hash: 'about' }} className="glass pill" style={{ display: 'inline-block', marginTop: 24, padding: '12px 24px', textDecoration: 'none', color: 'inherit' }}>
         ← Back to About
       </Link>
     </div>

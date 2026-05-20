@@ -2,6 +2,14 @@ import { Link } from 'react-router-dom';
 import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
 import { useContactModal } from '../context/ContactModalContext';
 import GlassDivider from './GlassDivider';
+import TikTokVideoEmbed from './TikTokVideoEmbed';
+
+/* vt.tiktok short links can’t be used in browser oEmbed (CORS). Use video id from share → Copy link, or resolve redirect once. */
+const FEATURED_TIKTOK = {
+  pageUrl: 'https://vt.tiktok.com/ZS9Rqp77n/',
+  videoId: '7559595700028296470',
+  title: 'Featured TikTok',
+};
 
 const marketingTypes = {
   posterDesign: {
@@ -180,11 +188,16 @@ export default function MarketingSection({ asPage = false }) {
               <ul style={{ marginBottom: 16, paddingLeft: 20, color: 'var(--text-secondary)', lineHeight: 1.7 }}>
                 {card.content.map((line) => <li key={line}>{line}</li>)}
               </ul>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 20 }}>
                 {card.tags.map((tag) => (
                   <span key={tag} className="tag-chip" style={{ borderColor: 'color-mix(in srgb, var(--accent-marketing) 50%, transparent)' }}>{tag}</span>
                 ))}
               </div>
+              <TikTokVideoEmbed
+                videoId={FEATURED_TIKTOK.videoId}
+                pageUrl={FEATURED_TIKTOK.pageUrl}
+                title={FEATURED_TIKTOK.title}
+              />
             </div>
           ))}
 
