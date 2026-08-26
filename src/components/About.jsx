@@ -6,6 +6,7 @@ const education = [
   { name: 'University of Turku', degree: 'Exchange', period: '2022–2023', slug: 'university-of-turku' },
   { name: 'Aalto Open University', degree: 'Business & Law', period: '2022–Current', slug: 'aalto' },
   { name: 'Metropolia', degree: 'BBA European Business', period: '2024–Current', slug: 'metropolia' },
+  { name: 'Rennes School of Business', degree: 'Digital Marketing major', period: '2026–2027', slug: 'rennes' },
 ];
 
 export default function About() {

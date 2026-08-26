@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
 import GlassDivider from './GlassDivider';
 
-const STORAGE_KEY = 'oksana-certifications-v7';
+const STORAGE_KEY = 'oksana-certifications-v8';
 
 const initialCerts = [
   { id: '10', name: 'Claude Code in Action', institution: 'Anthropic Education', year: 'Jun 2026', link: 'https://verify.skilljar.com/c/u9tvqzam8coc' },
@@ -15,6 +15,7 @@ const initialCerts = [
   { id: '6', name: 'Foundations of Digital Marketing and E-commerce', institution: 'Google (Coursera)', year: '2026', link: 'https://coursera.org/share/98f260f4579c3bb183314a0536ec4f03' },
   { id: '5', name: 'SMM Certification', institution: 'Certificate', year: '—', link: '/certificates/oksana-kozhan-certificate.pdf' },
   { id: '2', name: 'Exchange — Law', institution: 'University of Turku', year: '2023', link: '' },
+  { id: '13', name: 'Bachelor in Management — Digital Marketing major', institution: 'Rennes School of Business', year: '2026–2027', link: '' },
   { id: '3', name: 'BBA (In Progress)', institution: 'Metropolia University of Applied Sciences', year: '2024–Current', link: '' },
   { id: '4', name: 'Business & Law Courses', institution: 'Aalto University Open University', year: '2022–Current', link: '' },
 ];
