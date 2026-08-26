@@ -4,10 +4,12 @@ import { useActiveSection } from '../hooks/useIntersectionObserver';
 const links = [
   { id: 'hero', label: 'HOME' },
   { id: 'about', label: 'ABOUT' },
-  { id: 'legal', label: 'LEGAL' },
-  { id: 'events', label: 'EVENTS' },
+  { id: 'partnerships', label: 'PARTNERS' },
+  { id: 'ai', label: 'AI' },
   { id: 'marketing', label: 'MARKETING' },
-  { id: 'certifications', label: 'CERTIFICATIONS' },
+  { id: 'events', label: 'EVENTS' },
+  { id: 'legal', label: 'LEGAL' },
+  { id: 'certifications', label: 'CERTS' },
   { id: 'contact', label: 'CONTACT' },
 ];
 

@@ -5,21 +5,6 @@ import GlassDivider from './GlassDivider';
 
 const cards = [
   {
-    slug: 'atas',
-    title: 'Partner Relations and Success Manager',
-    org: 'ATAS',
-    period: '2026–Current',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
-    imageAlt: 'ATAS',
-    content: [
-      'Deliver a consistently high level of service and support to partners',
-      'Build and nurture long-term partner relationships with clear information, guidance, and follow-through',
-      'Shape sales-growth and efficiency initiatives aligned with leadership direction, grounded in internal performance data',
-      'Keep internal systems, reporting, and documentation accurate and up to date',
-    ],
-    tags: ['Partnerships', 'Success Management'],
-  },
-  {
     slug: 'young-fashion-show',
     title: 'Business Assistant & Partnerships Coordinator',
     org: 'Young Fashion Show',

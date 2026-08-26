@@ -105,6 +105,8 @@ const tools = [
   'Notion',
   'Microsoft 365',
   'ChatGPT',
+  'Claude',
+  'Claude Code',
 ];
 
 function SubsectionHeader({ title, subtitle, first }) {

@@ -31,10 +31,10 @@ export default function About() {
       >
         <div>
           <p style={{ color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: 24, fontSize: 15, textAlign: 'right' }}>
-            Law graduate from Ivan Franko National University of Lviv with exchange experience at the
-            University of Turku. Currently pursuing BBA at Metropolia and business courses at Aalto
-            Open University. Combines legal expertise with digital marketing and event management —
-            from GDPR compliance to fundraising campaigns and social media strategy.
+            Partner Relations & Success Manager at ATAS — managing the affiliate program, building partner growth
+            strategies, and working from performance data. Repetitive work is automated with AI, certified in Claude
+            Code and Oxford&rsquo;s AI programmes. Behind it: an LL.B., privacy-law practice in GDPR and data
+            protection, and a BBA in progress at Metropolia.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
             {education.map((edu) => (

@@ -6,7 +6,10 @@ export default function ProjectPage() {
   const project = eventProjects[slug] || marketingProjects[slug];
   const section = project?.section || 'events';
   const backTo = { pathname: '/', hash: section };
-  const backLabel = section === 'marketing' ? 'Back to Marketing' : 'Back to Events';
+  const backLabel =
+    section === 'marketing' ? 'Back to Marketing'
+    : section === 'partnerships' ? 'Back to Partnerships'
+    : 'Back to Events';
   const sectionClass = section === 'marketing' ? 'section-marketing' : 'section-events';
   const accentBorder = section === 'marketing' ? 'color-mix(in srgb, var(--accent-marketing) 50%, transparent)' : 'color-mix(in srgb, var(--accent-events) 50%, transparent)';
 

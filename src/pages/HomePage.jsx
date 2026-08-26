@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import PartnershipsSection from '../components/PartnershipsSection';
+import AISection from '../components/AISection';
 import LegalSection from '../components/LegalSection';
 import EventsSection from '../components/EventsSection';
 import MarketingSection from '../components/MarketingSection';
@@ -35,9 +37,11 @@ export default function HomePage() {
     <div className="scroll-container">
       <Hero onCtaClick={() => scrollToSection('about')} ctaText="Explore My Work ↓" />
       <About />
-      <LegalSection asPage={false} />
-      <EventsSection asPage={false} />
+      <PartnershipsSection asPage={false} />
+      <AISection asPage={false} />
       <MarketingSection asPage={false} />
+      <EventsSection asPage={false} />
+      <LegalSection asPage={false} />
       <CertificationsSection asPage={false} />
       <ContactSection asPage={false} />
     </div>

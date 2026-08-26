@@ -1,7 +1,7 @@
 import { useTypewriter } from '../hooks/useTypewriter';
 import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
 
-const roles = ['Privacy Lawyer', 'Event Manager', 'Marketing Strategist', 'BBA Student'];
+const roles = ['Affiliate & Partnerships Manager', 'Partner Success Manager', 'AI Process Optimizer', 'Privacy & Compliance Lawyer'];
 
 export default function Hero({ ctaText = 'Explore My Work ↓', onCtaClick }) {
   const displayRole = useTypewriter(roles);
@@ -59,8 +59,8 @@ export default function Hero({ ctaText = 'Explore My Work ↓', onCtaClick }) {
           marginBottom: 28,
         }}
       >
-        Multidisciplinary professional combining Law (LL.B.), Digital Marketing, and Event
-        Management — bridging legal compliance, creative campaigns, and community-building.
+        Partner Relations & Success Manager — affiliate growth, partner strategy, and AI-optimized
+        processes, built on an LL.B. in privacy and compliance.
       </p>
 
       <div
@@ -73,7 +73,7 @@ export default function Hero({ ctaText = 'Explore My Work ↓', onCtaClick }) {
           marginBottom: 40,
         }}
       >
-        {['Law', 'Events', 'Marketing'].map((tag) => (
+        {['Affiliate Growth', 'Partner Success', 'AI Optimization', 'Analytics', 'Compliance'].map((tag) => (
           <span key={tag} className="glass pill tag-chip" style={{ padding: '8px 18px' }}>
             {tag}
           </span>
@@ -112,8 +112,8 @@ export default function Hero({ ctaText = 'Explore My Work ↓', onCtaClick }) {
         }}
       >
         {[
-          { value: '1.7M+', label: 'Social Media Views' },
-          { value: '€100,000+', label: 'Funds Raised' },
+          { value: '1.7M+', label: 'Campaign Reach Driven' },
+          { value: '€100,000+', label: 'Funds & Partnerships Raised' },
           { value: '4+', label: 'Languages Spoken' },
         ].map((stat) => (
           <div key={stat.label} className="glass glass-deep" style={{ padding: '20px 32px', borderRadius: 16 }}>

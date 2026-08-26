@@ -33,6 +33,10 @@
   --accent-events: #b85c64;
   --accent-marketing: #E3DFCE;
   --accent-neutral: #94B1C8;
+  --accent-partners: #d3a85f;
+  --accent-ai: #7fc8b8;
+  --glow-partners: 0 0 40px rgba(211, 168, 95, 0.3);
+  --glow-ai: 0 0 40px rgba(127, 200, 184, 0.28);
   --glow-legal: 0 0 40px rgba(148, 177, 200, 0.25);
   --glow-events: 0 0 40px rgba(184, 92, 100, 0.35);
   --glow-marketing: 0 0 40px rgba(227, 223, 206, 0.2);
@@ -74,6 +78,10 @@
   --accent-events: #8a4a52;
   --accent-marketing: #5a5248;
   --accent-neutral: #4a6a8a;
+  --accent-partners: #8a6a26;
+  --accent-ai: #2f7a6b;
+  --glow-partners: 0 0 40px rgba(138, 106, 38, 0.2);
+  --glow-ai: 0 0 40px rgba(47, 122, 107, 0.2);
   --glow-legal: 0 0 40px rgba(74, 106, 138, 0.2);
   --glow-events: 0 0 40px rgba(138, 74, 82, 0.25);
   --glow-marketing: 0 0 40px rgba(90, 82, 72, 0.2);
@@ -113,6 +121,10 @@
   --accent-events: #c47b85;
   --accent-marketing: #c4b87b;
   --accent-neutral: #7ba3c4;
+  --accent-partners: #c9a45f;
+  --accent-ai: #74b8ab;
+  --glow-partners: 0 0 40px rgba(201, 164, 95, 0.28);
+  --glow-ai: 0 0 40px rgba(116, 184, 171, 0.25);
   --glow-legal: 0 0 40px rgba(123, 163, 196, 0.25);
   --glow-events: 0 0 40px rgba(196, 123, 133, 0.3);
   --glow-marketing: 0 0 40px rgba(196, 184, 123, 0.2);
@@ -248,10 +260,14 @@ body {
 .glass-deep.section-legal { --section-glow: var(--glow-legal); border-left: 3px solid var(--accent-legal); }
 .glass-deep.section-events { --section-glow: var(--glow-events); border-left: 3px solid var(--accent-events); }
 .glass-deep.section-marketing { --section-glow: var(--glow-marketing); border-left: 3px solid var(--accent-marketing); }
+.glass-deep.section-partners { --section-glow: var(--glow-partners); border-left: 3px solid var(--accent-partners); }
+.glass-deep.section-ai { --section-glow: var(--glow-ai); border-left: 3px solid var(--accent-ai); }
 
 .glass-deep.section-legal:hover { box-shadow: 0 12px 60px var(--glass-shadow-dark), inset 0 2px 0 var(--glass-highlight), var(--glow-legal); }
 .glass-deep.section-events:hover { box-shadow: 0 12px 60px var(--glass-shadow-dark), inset 0 2px 0 var(--glass-highlight), var(--glow-events); }
 .glass-deep.section-marketing:hover { box-shadow: 0 12px 60px var(--glass-shadow-dark), inset 0 2px 0 var(--glass-highlight), var(--glow-marketing); }
+.glass-deep.section-partners:hover { box-shadow: 0 12px 60px var(--glass-shadow-dark), inset 0 2px 0 var(--glass-highlight), var(--glow-partners); }
+.glass-deep.section-ai:hover { box-shadow: 0 12px 60px var(--glass-shadow-dark), inset 0 2px 0 var(--glass-highlight), var(--glow-ai); }
 
 /* Add project CTA — inviting, clickable */
 .add-project-cta {
