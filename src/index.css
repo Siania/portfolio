@@ -429,6 +429,18 @@ h3, h4 {
   margin: 0 auto 16px;
 }
 
+/* Fixed 2-column grid — avoids the orphaned-single-card last row that
+   auto-fit/auto-fill produce when an odd column count no longer divides
+   the item count evenly. */
+.grid-2up {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 640px) {
+  .grid-2up { grid-template-columns: repeat(2, 1fr); }
+}
+
 /* Tag chips */
 .tag-chip {
   display: inline-block;

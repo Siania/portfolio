@@ -69,7 +69,7 @@ export default function AISection({ asPage = false }) {
           <h3 style={{ fontFamily: 'var(--font-accent)', fontSize: 20, fontWeight: 600, letterSpacing: '0.05em', marginBottom: 16 }}>
             AI Credentials
           </h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 16, marginBottom: 32 }}>
+          <div className="grid-2up" style={{ marginBottom: 32 }}>
             {credentials.map((c) => (
               <a
                 key={c.name}
