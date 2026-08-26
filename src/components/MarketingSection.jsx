@@ -2,13 +2,6 @@ import { Link } from 'react-router-dom';
 import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
 import { useContactModal } from '../context/ContactModalContext';
 import GlassDivider from './GlassDivider';
-import TikTokVideoEmbed from './TikTokVideoEmbed';
-
-/* Video id comes from the post's share → Copy link URL. */
-const FEATURED_TIKTOK = {
-  videoId: '7559595700028296470',
-  title: 'Featured TikTok',
-};
 
 const marketingTypes = {
   posterDesign: {
@@ -194,7 +187,6 @@ export default function MarketingSection({ asPage = false }) {
                   <span key={tag} className="tag-chip" style={{ borderColor: 'color-mix(in srgb, var(--accent-marketing) 50%, transparent)' }}>{tag}</span>
                 ))}
               </div>
-              <TikTokVideoEmbed videoId={FEATURED_TIKTOK.videoId} title={FEATURED_TIKTOK.title} />
             </div>
           ))}
 
