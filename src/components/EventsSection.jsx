@@ -2,87 +2,9 @@ import { Link } from 'react-router-dom';
 import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
 import { useContactModal } from '../context/ContactModalContext';
 import GlassDivider from './GlassDivider';
+import { eventProjects, eventOrder } from '../data/projects';
 
-const cards = [
-  {
-    slug: 'young-fashion-show',
-    title: 'Business Assistant & Partnerships Coordinator',
-    org: 'Young Fashion Show',
-    period: 'Jan 2026 (1 month)',
-    image: '/projects/young-fashion-show/banner.png',
-    imageAlt: 'Young Fashion Show',
-    content: [
-      'Business support and partnerships coordination at YFS — global runway fashion tour for kids and teens',
-      'Collaboration with modeling agencies, designers, and brands across U.S. cities',
-    ],
-    tags: ['Partnerships', 'Fashion Events', 'Kids & Teens', 'Event Coordination'],
-  },
-  {
-    slug: 'nordic-summit',
-    title: 'Co-Organizer',
-    org: 'Nordic Ukraine Advocacy Summit',
-    period: '2025',
-    image: '/projects/nordic-summit/group-hall.png',
-    imageAlt: 'Nordic Ukraine Advocacy Summit',
-    content: [
-      'Co-organized a summit dedicated to fostering dialogue and strengthening advocacy efforts for Ukraine within the Nordic region',
-      'Brought together CSO representatives from across the Nordic countries to discuss strategies and share insights',
-      'Focused on supporting Ukraine\'s sovereignty, democracy, and economic development',
-    ],
-    tags: ['Advocacy', 'Nordic', 'CSOs', 'Ukraine', 'Summit'],
-  },
-  {
-    slug: 'fundraising',
-    title: 'Fundraising & Partnerships',
-    org: 'Ukrainalaisten yhdistys Suomessa',
-    period: 'May 2024 – May 2025',
-    highlight: '€100,000+',
-    image: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80',
-    imageAlt: 'Fundraising and community events',
-    content: [
-      'Fundraising campaign: raised €100,000+',
-      'Partnerships: Helsingin Sanomat, Helsinki Book Fair, Maailma kylässä, Finnish Parliament',
-      'Kamina Keräys campaign, MobilePay, published in Ilta-Sanomat',
-    ],
-    tags: ['Fundraising', '€100K+', 'Government Relations', 'Helsinki', 'Partnerships'],
-  },
-  {
-    slug: 'slush',
-    title: 'Info Team Volunteer',
-    org: 'Slush',
-    period: 'Nov 2025',
-    image: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80',
-    imageAlt: 'Slush startup event',
-    content: [
-      'Info team volunteer at Slush 2025 — world\'s leading founder-focused startup event',
-      'Guided hundreds of international attendees, critical problem solving, AI-tools for customer support',
-      'Process improvement and feedback for 1,600 person event',
-    ],
-    tags: ['Slush', 'Startup', 'International', 'Volunteer'],
-  },
-  {
-    slug: 'vpeb-music',
-    title: 'Marketing Lead',
-    org: 'VPEB Music',
-    period: 'Jun–Sep 2025',
-    image: '/projects/vpeb-music/live-show.png',
-    imageAlt: 'Your Mother, Always live acoustic show',
-    content: [
-      'Event marketing campaigns, social media schedules, sponsor communication, ticketing',
-    ],
-    tags: ['Music Events', 'Ticketing', 'Sponsor Relations'],
-  },
-  {
-    slug: 'lawyers-association',
-    title: 'Event & Content Manager',
-    org: 'Association of Lawyers of Ukraine',
-    period: 'Sep 2019 – Dec 2022',
-    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80',
-    imageAlt: 'Legal professional event',
-    content: ['Legal events for law firms and students, venue and speaker coordination'],
-    tags: ['Legal Events', 'Speakers', 'Coordination'],
-  },
-];
+const cards = eventOrder.map((slug) => eventProjects[slug]);
 
 export default function EventsSection({ asPage = false }) {
   const [ref, isVisible] = useRevealOnScroll();
@@ -141,12 +63,12 @@ export default function EventsSection({ asPage = false }) {
                 </p>
               )}
               <ul style={{ marginBottom: 16, paddingLeft: 20, color: 'var(--text-secondary)', lineHeight: 1.7 }}>
-                {card.content.map((line) => (
+                {card.summary.map((line) => (
                   <li key={line}>{line}</li>
                 ))}
               </ul>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                {card.tags.map((tag) => (
+                {card.tags.slice(0, 5).map((tag) => (
                   <span key={tag} className="tag-chip" style={{ borderColor: 'color-mix(in srgb, var(--accent-events) 50%, transparent)' }}>
                     {tag}
                   </span>

@@ -1,6 +1,11 @@
 export const eventProjects = {
   slush: {
     slug: 'slush',
+    summary: [
+      'Info team volunteer at Slush 2025 — world\'s leading founder-focused startup event',
+      'Guided hundreds of international attendees, critical problem solving, AI-tools for customer support',
+      'Process improvement and feedback for 1,600 person event',
+    ],
     title: 'Info Team Volunteer',
     org: 'Slush',
     period: 'Nov 2025',
@@ -40,6 +45,10 @@ export const eventProjects = {
   },
   'young-fashion-show': {
     slug: 'young-fashion-show',
+    summary: [
+      'Business support and partnerships coordination at YFS — global runway fashion tour for kids and teens',
+      'Collaboration with modeling agencies, designers, and brands across U.S. cities',
+    ],
     title: 'Business Assistant & Partnerships Coordinator',
     org: 'Young Fashion Show',
     period: 'Jan 2026 (1 month)',
@@ -55,6 +64,11 @@ export const eventProjects = {
   },
   'nordic-summit': {
     slug: 'nordic-summit',
+    summary: [
+      'Co-organized a summit dedicated to fostering dialogue and strengthening advocacy efforts for Ukraine within the Nordic region',
+      'Brought together CSO representatives from across the Nordic countries to discuss strategies and share insights',
+      'Focused on supporting Ukraine\'s sovereignty, democracy, and economic development',
+    ],
     title: 'Co-Organizer',
     org: 'Nordic Ukraine Advocacy Summit',
     period: '2025',
@@ -77,6 +91,11 @@ export const eventProjects = {
   },
   fundraising: {
     slug: 'fundraising',
+    summary: [
+      'Fundraising campaign: raised €100,000+',
+      'Partnerships: Helsingin Sanomat, Helsinki Book Fair, Maailma kylässä, Finnish Parliament',
+      'Kamina Keräys campaign, MobilePay, published in Ilta-Sanomat',
+    ],
     title: 'Fundraising & Partnerships',
     org: 'Ukrainalaisten yhdistys Suomessa',
     period: 'May 2024 – May 2025',
@@ -92,6 +111,9 @@ export const eventProjects = {
   },
   'vpeb-music': {
     slug: 'vpeb-music',
+    summary: [
+      'Event marketing campaigns, social media schedules, sponsor communication, ticketing',
+    ],
     title: 'Marketing Lead',
     org: 'VPEB Music',
     period: 'Jun–Sep 2025',
@@ -115,6 +137,9 @@ export const eventProjects = {
   },
   'lawyers-association': {
     slug: 'lawyers-association',
+    summary: [
+      'Legal events for law firms and students, venue and speaker coordination',
+    ],
     title: 'Event & Content Manager',
     org: 'Association of Lawyers of Ukraine',
     period: 'Sep 2019 – Dec 2022',
@@ -158,3 +183,13 @@ export const marketingProjects = {
     tags: ['Poster Design', 'Helsinki Book Fair', 'Presentation', 'Visual Design', 'Ukraine Season'],
   },
 };
+
+/** Display order for the Events section; ATAS is featured under Partnerships instead. */
+export const eventOrder = [
+  'young-fashion-show',
+  'nordic-summit',
+  'fundraising',
+  'slush',
+  'vpeb-music',
+  'lawyers-association',
+];

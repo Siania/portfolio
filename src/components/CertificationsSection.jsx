@@ -1,10 +1,7 @@
-import { useState, useEffect } from 'react';
 import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
 import GlassDivider from './GlassDivider';
 
-const STORAGE_KEY = 'oksana-certifications-v8';
-
-const initialCerts = [
+const certs = [
   { id: '10', name: 'Claude Code in Action', institution: 'Anthropic Education', year: 'Jun 2026', link: 'https://verify.skilljar.com/c/u9tvqzam8coc' },
   { id: '11', name: 'Forward', institution: 'McKinsey.org', year: 'Jun 2026', link: '/certificates/mckinsey-forward.pdf' },
   { id: '12', name: 'Inside LVMH Certificate', institution: 'LVMH', year: 'Jul 2026', link: '/certificates/inside-lvmh.pdf' },
@@ -22,19 +19,6 @@ const initialCerts = [
 
 export default function CertificationsSection({ asPage = false }) {
   const [ref, isVisible] = useRevealOnScroll();
-  const [certs] = useState(() => {
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) return JSON.parse(stored);
-    } catch {
-      /* ignore parse errors */
-    }
-    return initialCerts;
-  });
-
-  useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(certs));
-  }, [certs]);
 
   return (
     <>
