@@ -64,9 +64,14 @@ export default function PartnershipsSection({ asPage = false }) {
             className="glass-deep section-partners reveal"
             style={{ display: 'block', padding: 28, borderRadius: 16, marginBottom: 32, textDecoration: 'none', color: 'inherit' }}
           >
-            <span className="tag-chip" style={{ borderColor: `color-mix(in srgb, ${accent} 60%, transparent)`, marginBottom: 12, display: 'inline-block' }}>
-              Current role
-            </span>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap', marginBottom: 16 }}>
+              <span className="tag-chip" style={{ borderColor: `color-mix(in srgb, ${accent} 60%, transparent)` }}>
+                Current role
+              </span>
+              <span style={{ background: '#fff', borderRadius: 10, padding: '10px 16px', display: 'inline-flex', border: '1px solid rgba(0, 0, 0, 0.08)' }}>
+                <img src="/projects/atas/logo.png" alt="ATAS" style={{ height: 22, width: 'auto', display: 'block' }} />
+              </span>
+            </div>
             <h3 style={{ fontFamily: 'var(--font-accent)', fontSize: 20, fontWeight: 600, letterSpacing: '0.04em', marginBottom: 4 }}>
               {currentRole.title} · {currentRole.org}
             </h3>

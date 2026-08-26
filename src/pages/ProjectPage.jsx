@@ -45,6 +45,27 @@ export default function ProjectPage() {
           )}
           <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 24 }}>{project.period}</p>
 
+          {project.logo && (
+            <div
+              style={{
+                marginBottom: 32,
+                borderRadius: 16,
+                background: '#fff',
+                border: '1px solid rgba(0, 0, 0, 0.08)',
+                padding: '40px 32px',
+                display: 'flex',
+                justifyContent: 'center',
+                boxShadow: '0 8px 32px var(--glass-shadow-dark)',
+              }}
+            >
+              <img
+                src={project.logo}
+                alt={project.imageAlt || project.org}
+                style={{ width: '100%', maxWidth: 360, height: 'auto', display: 'block' }}
+              />
+            </div>
+          )}
+
           {project.image && (
             <div style={{ marginBottom: 32, borderRadius: 16, overflow: 'hidden', boxShadow: '0 8px 32px var(--glass-shadow-dark)', aspectRatio: '16/9' }}>
               <img

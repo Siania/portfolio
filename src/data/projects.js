@@ -27,8 +27,8 @@ export const eventProjects = {
     title: 'Partner Relations & Success Manager',
     org: 'ATAS',
     period: '2026 – Current',
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=85',
-    imageAlt: 'ATAS — Partner Relations and Success Manager',
+    logo: '/projects/atas/logo.png',
+    imageAlt: 'ATAS',
     content: [
       'Affiliate program managed end to end — intake, vetting, onboarding, activation, and account growth',
       'Individual growth strategies per partner: traffic mix, offers, creatives, and payout structure',
