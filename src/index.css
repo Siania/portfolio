@@ -292,7 +292,8 @@ body {
   pointer-events: none;
 }
 
-.video-background video {
+.video-background video,
+.video-background img {
   position: absolute;
   inset: 0;
   width: 100%;
