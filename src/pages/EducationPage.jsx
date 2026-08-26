@@ -42,21 +42,25 @@ export default function EducationPage() {
               {institution.programme && ` · ${institution.programme}`}
             </p>
             {institution.description && <p style={{ fontSize: 15, color: 'var(--text-secondary)', lineHeight: 1.7, marginBottom: 24 }}>{institution.description}</p>}
-            <h3 style={{ fontFamily: 'var(--font-accent)', fontSize: 16, fontWeight: 600, marginBottom: 16 }}>Courses ({institution.courses.length})</h3>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
-              {institution.courses.map((c) => (
-                <Link
-                  key={c.slug}
-                  to={`/education/${c.slug}`}
-                  className="glass"
-                  style={{ padding: '12px 16px', borderRadius: 12, textDecoration: 'none', color: 'inherit', display: 'inline-block', border: '1px solid var(--glass-border)' }}
-                >
-                  <span style={{ fontWeight: 600, fontSize: 14 }}>{c.name}</span>
-                  <span style={{ fontSize: 12, color: 'var(--text-muted)', display: 'block', marginTop: 4 }}>{c.credits} cr</span>
-                  <span style={{ fontSize: 11, color: 'var(--accent-legal)', marginTop: 4, display: 'block' }}>View →</span>
-                </Link>
-              ))}
-            </div>
+            {institution.courses?.length > 0 && (
+              <>
+              <h3 style={{ fontFamily: 'var(--font-accent)', fontSize: 16, fontWeight: 600, marginBottom: 16 }}>Courses ({institution.courses.length})</h3>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12 }}>
+                {institution.courses.map((c) => (
+                  <Link
+                    key={c.slug}
+                    to={`/education/${c.slug}`}
+                    className="glass"
+                    style={{ padding: '12px 16px', borderRadius: 12, textDecoration: 'none', color: 'inherit', display: 'inline-block', border: '1px solid var(--glass-border)' }}
+                  >
+                    <span style={{ fontWeight: 600, fontSize: 14 }}>{c.name}</span>
+                    <span style={{ fontSize: 12, color: 'var(--text-muted)', display: 'block', marginTop: 4 }}>{c.credits} cr</span>
+                    <span style={{ fontSize: 11, color: 'var(--accent-legal)', marginTop: 4, display: 'block' }}>View →</span>
+                  </Link>
+                ))}
+              </div>
+              </>
+            )}
           </div>
         </div>
       </div>

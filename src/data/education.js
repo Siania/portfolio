@@ -123,25 +123,7 @@ export const coursesByInstitution = {
     name: 'Rennes School of Business',
     period: 'Sep 2026 – Apr 2027',
     programme: 'Bachelor in Management — Digital Marketing major',
-    description: 'Double-degree year in France through Metropolia, majoring in digital marketing: omni-channel distribution, digital strategy and communications, consumer behaviour, and brand management, alongside international business and negotiation.',
-    courses: [
-      { slug: 'digital-marketing-strategy', name: 'Digital Marketing Strategy', code: 'MK306E_B', credits: 4 },
-      { slug: 'digital-marketing-communications', name: 'Digital Marketing Communications', code: 'MK309E_B', credits: 4 },
-      { slug: 'omni-channel-management', name: 'Omni Channel Management and Distribution', code: 'MK303E_B', credits: 4 },
-      { slug: 'consumer-behaviour', name: 'Consumer Behaviour', code: 'MK313E_B', credits: 4 },
-      { slug: 'business-to-business-marketing', name: 'Business to Business Marketing', code: 'MK307E_B', credits: 4 },
-      { slug: 'brand-management-sustainability', name: 'Brand Management and Sustainability', code: 'MK314E_B', credits: 4 },
-      { slug: 'strategy-rennes', name: 'Strategy', code: 'ST302E_B', credits: 4 },
-      { slug: 'international-business-environment', name: 'International Business Environment', code: 'ST307E_B', credits: 4 },
-      { slug: 'international-negotiation-skills', name: 'International Negotiation Skills', code: 'NG302E_B', credits: 4 },
-      { slug: 'international-hr-management', name: 'International HR Management', code: 'HR301E_B', credits: 4 },
-      { slug: 'entrepreneurial-thinking-innovation', name: 'Entrepreneurial Thinking and Innovation', code: 'ST308E_B', credits: 4 },
-      { slug: 'lean-project-management', name: 'Lean Project Management', code: 'PM303E_B', credits: 4 },
-      { slug: 'mindful-decision-making', name: 'Mindful Decision-Making', code: 'CR302E_B', credits: 4 },
-      { slug: 'doing-business-in-france', name: 'Doing Business in France', code: 'ST305E_B', credits: 4 },
-      { slug: 'french-language-rennes', name: 'French Language', code: '0LV2F1', credits: 2 },
-      { slug: 'french-culture-rennes', name: 'French Culture (taught in English)', code: '0FC1', credits: 2 },
-    ],
+    description: 'Double-degree year in France through Metropolia, with a major in digital marketing.',
   },
 };
 
@@ -149,7 +131,7 @@ export const coursesByInstitution = {
 export const allCourses = (() => {
   const list = [];
   Object.entries(coursesByInstitution).forEach(([instKey, inst]) => {
-    inst.courses.forEach((c) => {
+    (inst.courses || []).forEach((c) => {
       list.push({ ...c, institution: inst.name, institutionKey: instKey, programme: inst.programme, period: inst.period });
     });
   });
@@ -182,6 +164,6 @@ export const institutionSummaries = {
     degree: 'Bachelor in Management — Digital Marketing major',
     period: 'Sep 2026 – Apr 2027',
     shortName: 'Rennes School of Business',
-    description: 'Double-degree year in France through Metropolia, majoring in digital marketing.',
+    description: 'Double-degree year in France through Metropolia, with a major in digital marketing.',
   },
 };
