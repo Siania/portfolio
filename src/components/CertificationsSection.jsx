@@ -5,6 +5,7 @@ const certs = [
   { id: '10', name: 'Claude Code in Action', institution: 'Anthropic Education', year: 'Jun 2026', link: 'https://verify.skilljar.com/c/u9tvqzam8coc' },
   { id: '11', name: 'Forward', institution: 'McKinsey.org', year: 'Jun 2026', link: '/certificates/mckinsey-forward.pdf' },
   { id: '12', name: 'Inside LVMH Certificate', institution: 'LVMH', year: 'Jul 2026', link: '/certificates/inside-lvmh.pdf' },
+  { id: '14', name: 'What is design thinking?', institution: 'IBM SkillsBuild', year: '2026', link: 'https://skills.yourlearning.ibm.com/certificate/share/e0c94b9605ewogICJvYmplY3RUeXBlIiA6ICJBQ1RJVklUWSIsCiAgImxlYXJuZXJDTlVNIiA6ICI4ODIxMjg3UkVHIiwKICAib2JqZWN0SWQiIDogIkFMTS1DT1VSU0VfNDA2NzU1NiIKfQbe95d154cb-10' },
   { id: '1', name: 'Bachelor of Law', institution: 'Ivan Franko National University of Lviv', year: '2023', link: '/certificates/bachelor-of-law.pdf' },
   { id: '8', name: 'Project Management', institution: 'Certificate', year: '—', link: '/certificates/project-management.pdf' },
   { id: '9', name: 'AI, Justice, and the Rule of Law', institution: 'Saïd Business School, University of Oxford', year: 'May 2026', link: '/certificates/ai-justice-rule-of-law.pdf' },
