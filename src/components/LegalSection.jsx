@@ -5,7 +5,7 @@ const cards = [
   {
     title: 'Privacy Lawyer',
     org: 'Legal IT Group',
-    period: 'Sep 2025 – Present',
+    period: 'Sep 2025 – Sep 2026 (1 year)',
     content: [
       'GDPR & data protection compliance for IT clients in USA and UAE',
       'Drafting privacy policies, DPAs, and compliance documentation',

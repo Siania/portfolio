@@ -439,6 +439,9 @@ h3, h4 {
 }
 @media (min-width: 640px) {
   .grid-2up { grid-template-columns: repeat(2, 1fr); }
+  /* An odd item count leaves one card alone in the last row — span it
+     full width instead of leaving half the row empty. */
+  .grid-2up > :last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 
 /* Tag chips */

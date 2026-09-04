@@ -17,6 +17,7 @@ const credentials = [
   { name: 'AI and Digital Transformation in Government', issuer: 'Saïd Business School, Oxford', year: '2026', link: 'https://certify.sbs.ox.ac.uk/1455bbec-b60d-4933-97ca-aa49db77a990' },
   { name: 'AI, Justice, and the Rule of Law', issuer: 'Saïd Business School, Oxford', year: 'May 2026', link: '/certificates/ai-justice-rule-of-law.pdf' },
   { name: 'Forward', issuer: 'McKinsey.org', year: 'Jun 2026', link: '/certificates/mckinsey-forward.pdf' },
+  { name: 'What is design thinking?', issuer: 'IBM SkillsBuild', year: '2026', link: 'https://skills.yourlearning.ibm.com/certificate/share/e0c94b9605ewogICJvYmplY3RUeXBlIiA6ICJBQ1RJVklUWSIsCiAgImxlYXJuZXJDTlVNIiA6ICI4ODIxMjg3UkVHIiwKICAib2JqZWN0SWQiIDogIkFMTS1DT1VSU0VfNDA2NzU1NiIKfQbe95d154cb-10' },
 ];
 
 const stack = ['Claude', 'Claude Code', 'ChatGPT', 'Google Analytics 4', 'Meta Business Suite', 'Notion', 'Microsoft 365'];

@@ -51,7 +51,7 @@ export const eventProjects = {
     ],
     title: 'Business Assistant & Partnerships Coordinator',
     org: 'Young Fashion Show',
-    period: 'Jan 2026 (1 month)',
+    period: 'Jan 2026',
     url: 'https://www.youngfashionshow.com',
     image: '/projects/young-fashion-show/banner.png',
     imageAlt: 'Young Fashion Show — Oksana Kozhan, Business Assistant & Partnerships Coordinator',
@@ -186,9 +186,9 @@ export const marketingProjects = {
 
 /** Display order for the Events section; ATAS is featured under Partnerships instead. */
 export const eventOrder = [
-  'young-fashion-show',
   'nordic-summit',
   'fundraising',
+  'young-fashion-show',
   'slush',
   'vpeb-music',
   'lawyers-association',
