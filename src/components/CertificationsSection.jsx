@@ -17,7 +17,7 @@ const certs = [
   { id: '14', name: 'What is design thinking?', institution: 'IBM SkillsBuild', year: '2026', link: 'https://skills.yourlearning.ibm.com/certificate/share/e0c94b9605ewogICJvYmplY3RUeXBlIiA6ICJBQ1RJVklUWSIsCiAgImxlYXJuZXJDTlVNIiA6ICI4ODIxMjg3UkVHIiwKICAib2JqZWN0SWQiIDogIkFMTS1DT1VSU0VfNDA2NzU1NiIKfQbe95d154cb-10' },
   { id: '2', name: 'Exchange — Law', institution: 'University of Turku', year: '2023', link: '' },
   { id: '4', name: 'Business & Law Courses', institution: 'Aalto University Open University', year: '2022–Current', link: '' },
-  { id: '8', name: 'Project Management', institution: 'Certificate', year: '—', link: '/certificates/project-management.pdf' },
+  { id: '8', name: 'Project Management', institution: 'Foundation 4 Project Management Professionals Finland', year: '2026', link: '/certificates/project-management.pdf' },
   { id: '5', name: 'SMM Certification', institution: 'Certificate', year: '—', link: '/certificates/oksana-kozhan-certificate.pdf' },
 ];
 
