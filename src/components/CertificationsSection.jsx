@@ -1,21 +1,24 @@
 import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
 import GlassDivider from './GlassDivider';
 
+// Ordered best to lowest priority: completed/in-progress degrees first, then
+// credentials weighted by institution prestige and relevance to the current
+// Partnerships/AI positioning, generic-issuer certificates last.
 const certs = [
+  { id: '1', name: 'Bachelor of Law', institution: 'Ivan Franko National University of Lviv', year: '2023', link: '/certificates/bachelor-of-law.pdf' },
+  { id: '13', name: 'Bachelor in Management — Digital Marketing major', institution: 'Rennes School of Business', year: '2026–2027', link: '' },
+  { id: '3', name: 'BBA (In Progress)', institution: 'Metropolia University of Applied Sciences', year: '2024–Current', link: '' },
+  { id: '9', name: 'AI, Justice, and the Rule of Law', institution: 'Saïd Business School, University of Oxford', year: 'May 2026', link: '/certificates/ai-justice-rule-of-law.pdf' },
+  { id: '7', name: 'AI and Digital Transformation in Government', institution: 'Saïd Business School, University of Oxford', year: '2026', link: 'https://certify.sbs.ox.ac.uk/1455bbec-b60d-4933-97ca-aa49db77a990' },
   { id: '10', name: 'Claude Code in Action', institution: 'Anthropic Education', year: 'Jun 2026', link: 'https://verify.skilljar.com/c/u9tvqzam8coc' },
   { id: '11', name: 'Forward', institution: 'McKinsey.org', year: 'Jun 2026', link: '/certificates/mckinsey-forward.pdf' },
   { id: '12', name: 'Inside LVMH Certificate', institution: 'LVMH', year: 'Jul 2026', link: '/certificates/inside-lvmh.pdf' },
-  { id: '14', name: 'What is design thinking?', institution: 'IBM SkillsBuild', year: '2026', link: 'https://skills.yourlearning.ibm.com/certificate/share/e0c94b9605ewogICJvYmplY3RUeXBlIiA6ICJBQ1RJVklUWSIsCiAgImxlYXJuZXJDTlVNIiA6ICI4ODIxMjg3UkVHIiwKICAib2JqZWN0SWQiIDogIkFMTS1DT1VSU0VfNDA2NzU1NiIKfQbe95d154cb-10' },
-  { id: '1', name: 'Bachelor of Law', institution: 'Ivan Franko National University of Lviv', year: '2023', link: '/certificates/bachelor-of-law.pdf' },
-  { id: '8', name: 'Project Management', institution: 'Certificate', year: '—', link: '/certificates/project-management.pdf' },
-  { id: '9', name: 'AI, Justice, and the Rule of Law', institution: 'Saïd Business School, University of Oxford', year: 'May 2026', link: '/certificates/ai-justice-rule-of-law.pdf' },
-  { id: '7', name: 'AI and Digital Transformation in Government', institution: 'Saïd Business School, University of Oxford', year: '2026', link: 'https://certify.sbs.ox.ac.uk/1455bbec-b60d-4933-97ca-aa49db77a990' },
   { id: '6', name: 'Foundations of Digital Marketing and E-commerce', institution: 'Google (Coursera)', year: '2026', link: 'https://coursera.org/share/98f260f4579c3bb183314a0536ec4f03' },
-  { id: '5', name: 'SMM Certification', institution: 'Certificate', year: '—', link: '/certificates/oksana-kozhan-certificate.pdf' },
+  { id: '14', name: 'What is design thinking?', institution: 'IBM SkillsBuild', year: '2026', link: 'https://skills.yourlearning.ibm.com/certificate/share/e0c94b9605ewogICJvYmplY3RUeXBlIiA6ICJBQ1RJVklUWSIsCiAgImxlYXJuZXJDTlVNIiA6ICI4ODIxMjg3UkVHIiwKICAib2JqZWN0SWQiIDogIkFMTS1DT1VSU0VfNDA2NzU1NiIKfQbe95d154cb-10' },
   { id: '2', name: 'Exchange — Law', institution: 'University of Turku', year: '2023', link: '' },
-  { id: '13', name: 'Bachelor in Management — Digital Marketing major', institution: 'Rennes School of Business', year: '2026–2027', link: '' },
-  { id: '3', name: 'BBA (In Progress)', institution: 'Metropolia University of Applied Sciences', year: '2024–Current', link: '' },
   { id: '4', name: 'Business & Law Courses', institution: 'Aalto University Open University', year: '2022–Current', link: '' },
+  { id: '8', name: 'Project Management', institution: 'Certificate', year: '—', link: '/certificates/project-management.pdf' },
+  { id: '5', name: 'SMM Certification', institution: 'Certificate', year: '—', link: '/certificates/oksana-kozhan-certificate.pdf' },
 ];
 
 export default function CertificationsSection({ asPage = false }) {

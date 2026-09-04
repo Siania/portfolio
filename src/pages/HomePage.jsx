@@ -37,12 +37,12 @@ export default function HomePage() {
     <div className="scroll-container">
       <Hero onCtaClick={() => scrollToSection('about')} ctaText="Explore My Work ↓" />
       <About />
+      <CertificationsSection asPage={false} />
       <PartnershipsSection asPage={false} />
       <AISection asPage={false} />
       <MarketingSection asPage={false} />
       <EventsSection asPage={false} />
       <LegalSection asPage={false} />
-      <CertificationsSection asPage={false} />
       <ContactSection asPage={false} />
     </div>
   );

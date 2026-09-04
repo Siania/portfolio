@@ -9,7 +9,7 @@ import HomePage from './pages/HomePage';
 import ProjectPage from './pages/ProjectPage';
 import EducationPage from './pages/EducationPage';
 
-const sectionRoutes = ['about', 'partnerships', 'ai', 'marketing', 'events', 'legal', 'certifications', 'contact'];
+const sectionRoutes = ['about', 'certifications', 'partnerships', 'ai', 'marketing', 'events', 'legal', 'contact'];
 
 function App() {
   return (
