@@ -1,27 +1,6 @@
 import { useRevealOnScroll } from '../hooks/useIntersectionObserver';
 import GlassDivider from './GlassDivider';
 
-const STOPWORDS = new Set(['of', 'and', 'for', 'the', 'in', '&', 'a', 'an']);
-
-// Builds a short, recognizable badge from an institution name — e.g.
-// "Ivan Franko National University of Lviv" -> "IF", "IBM SkillsBuild" -> "IBM"
-// (kept as-is when the name already starts with a short acronym) — instead of
-// just the institution string's first raw character.
-function getInitials(institution) {
-  const clean = institution.replace(/\([^)]*\)/g, '').split(/[.,]/)[0].trim();
-  const words = clean.split(/\s+/).filter((w) => w && /[A-Za-z]/.test(w));
-  if (!words.length) return institution[0] || '?';
-
-  const first = words[0];
-  if (first.length <= 5 && first === first.toUpperCase()) return first;
-
-  const significant = words.filter((w) => !STOPWORDS.has(w.toLowerCase()));
-  const picks = (significant.length ? significant : words).slice(0, 2);
-  return picks.length === 1
-    ? picks[0].slice(0, 2).toUpperCase()
-    : picks.map((w) => w[0].toUpperCase()).join('');
-}
-
 // Ordered best to lowest priority: completed/in-progress degrees first, then
 // credentials weighted by institution prestige and relevance to the current
 // Partnerships/AI positioning, generic-issuer certificates last.
@@ -74,26 +53,6 @@ export default function CertificationsSection({ asPage = false }) {
                 animationDelay: `${i * 0.1}s`,
               }}
             >
-              <div
-                className="glass"
-                style={{
-                  height: 32,
-                  minWidth: 32,
-                  padding: '0 10px',
-                  borderRadius: 999,
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  marginBottom: 16,
-                  fontFamily: 'var(--font-accent)',
-                  fontSize: 12,
-                  fontWeight: 700,
-                  letterSpacing: '0.04em',
-                }}
-                title={cert.institution}
-              >
-                {getInitials(cert.institution)}
-              </div>
               <h3 style={{ fontFamily: 'var(--font-accent)', fontSize: 16, fontWeight: 600, letterSpacing: '0.03em', marginBottom: 6 }}>{cert.name}</h3>
               <p style={{ fontSize: 14, color: 'var(--text-secondary)', marginBottom: 12 }}>{cert.institution}</p>
               <span className="tag-chip" style={{ marginBottom: 16, display: 'inline-block' }}>{cert.year}</span>
