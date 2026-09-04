@@ -32,9 +32,6 @@ const dealModels = [
 ];
 
 const metrics = [
-  'FTDs & deposit conversion',
-  'Click → Registration → Deposit',
-  'CPA & payback period',
   'NGR per partner',
   'Retention & churn',
   'Traffic quality',
