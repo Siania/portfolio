@@ -14,52 +14,18 @@ const marketingTypes = {
       { name: 'The Rainbow / Raiduha', event: 'Film screening', date: '10.11', venue: 'Cinema Orion, Helsinki' },
     ],
   },
-  digitalContent: {
-    title: 'Digital Content Strategy',
-    cards: [
-      {
-        org: 'Ukrainalaisten yhdistys Suomessa',
-        period: 'May 2024 – May 2025',
-        highlight: '1.7M views on Facebook, 396K on Instagram',
-        content: [
-          'Digital content strategy driving 1.7M views on Facebook, 396K on Instagram',
-          'Community engagement and advocacy content',
-          'Targeted advertising, optimized posting schedule, interactive content',
-        ],
-        tags: ['Social Media', '1.7M Views', 'Facebook', 'Instagram', 'Content Strategy'],
-      },
+  uys: {
+    title: 'Ukrainalaisten yhdistys Suomessa',
+    subtitle: 'Digital Content · Fundraising Campaigns · Visual & Brand Design',
+    org: 'Ukrainalaisten yhdistys Suomessa',
+    period: 'May 2024 – May 2025',
+    highlight: '1.7M+ Views · €43K Raised',
+    content: [
+      'Digital content strategy driving 1.7M views on Facebook, 396K on Instagram — community engagement, advocacy content, targeted advertising',
+      'Kamina Keräys fundraising campaign — €43,000 raised, MobilePay coordination, published in Ilta-Sanomat, presented at Helsingin Kirjamessut',
+      'Poster design and brand visuals — Shchedryk Ukrainian Youth Choir concert at Helsinki Cathedral, movie posters, social media graphics',
     ],
-  },
-  fundraising: {
-    title: 'Fundraising & Campaign Marketing',
-    cards: [
-      {
-        org: 'Ukrainalaisten yhdistys Suomessa',
-        period: 'May 2024 – May 2025',
-        content: [
-          'Kamina Keräys fundraising campaign — €43,000 raised',
-          'Published in Ilta-Sanomat newspaper',
-          'Presented at Helsingin Kirjamessut (Helsinki Book Fair)',
-          'MobilePay campaign coordination',
-        ],
-        tags: ['Fundraising', '€43K', 'Kamina Keräys', 'Media', 'Partnerships'],
-      },
-    ],
-  },
-  visualBrand: {
-    title: 'Visual & Brand Design',
-    cards: [
-      {
-        org: 'Ukrainalaisten yhdistys Suomessa',
-        period: 'May 2024 – May 2025',
-        content: [
-          'Poster design for Shchedryk Ukrainian Youth Choir concert at Helsinki Cathedral',
-          'Movie posters and promotional materials for marketing campaigns',
-          'Brand visuals and social media graphics',
-        ],
-        tags: ['Poster Design', 'Branding', 'Visuals', 'UGC'],
-      },
-    ],
+    tags: ['Social Media', 'Content Strategy', 'Fundraising', 'Kamina Keräys', 'Poster Design', 'Branding'],
   },
   coordination: {
     title: 'Marketing Coordination',
@@ -151,99 +117,56 @@ export default function MarketingSection({ asPage = false }) {
             </div>
           </div>
 
-          <Link
-            to="/projects/helsingin-kirjamessut"
-            className="glass-deep section-marketing reveal"
-            style={{ display: 'flex', alignItems: 'center', gap: 20, padding: 0, borderRadius: 16, marginBottom: 24, overflow: 'hidden', textDecoration: 'none', color: 'inherit' }}
-          >
-            <div style={{ width: 200, flexShrink: 0, aspectRatio: '16/9', overflow: 'hidden' }}>
-              <img
-                src="/projects/helsingin-kirjamessut/presentation.png"
-                alt="Helsingin Kirjamessut presentation design"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-              />
+          {/* Ukrainalaisten yhdistys Suomessa — combined role, one card */}
+          <SubsectionHeader title={marketingTypes.uys.title} subtitle={marketingTypes.uys.subtitle} />
+          <div className="glass-deep section-marketing reveal" style={{ padding: 28, borderRadius: 16, marginBottom: 20 }}>
+            <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 8 }}>{marketingTypes.uys.period}</p>
+            <p style={{ fontFamily: 'var(--font-numbers)', fontSize: 24, fontWeight: 600, letterSpacing: '0.04em', color: 'var(--accent-marketing)', marginBottom: 12 }}>{marketingTypes.uys.highlight}</p>
+            <ul style={{ marginBottom: 16, paddingLeft: 20, color: 'var(--text-secondary)', lineHeight: 1.7 }}>
+              {marketingTypes.uys.content.map((line) => <li key={line}>{line}</li>)}
+            </ul>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 20 }}>
+              {marketingTypes.uys.tags.map((tag) => (
+                <span key={tag} className="tag-chip" style={{ borderColor: 'color-mix(in srgb, var(--accent-marketing) 50%, transparent)' }}>{tag}</span>
+              ))}
             </div>
-            <div style={{ padding: 24, flex: 1 }}>
-              <strong style={{ fontFamily: 'var(--font-accent)', fontSize: 16, letterSpacing: '0.04em', display: 'block', marginBottom: 4 }}>Helsingin Kirjamessut</strong>
-              <p style={{ fontSize: 14, color: 'var(--text-secondary)', margin: 0 }}>Presentation design — Preserving Memories for our Future</p>
-              <p style={{ fontSize: 13, color: 'var(--accent-marketing)', marginTop: 8 }}>View project →</p>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 12 }}>
+              <Link
+                to="/projects/kamina-kerays"
+                className="glass"
+                style={{ display: 'flex', alignItems: 'center', gap: 14, padding: 0, borderRadius: 12, overflow: 'hidden', textDecoration: 'none', color: 'inherit' }}
+              >
+                <div style={{ width: 96, flexShrink: 0, aspectRatio: '16/9', overflow: 'hidden' }}>
+                  <img
+                    src="/projects/kamina-kerays/campaign.png"
+                    alt="Kamina Keräys campaign design"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  />
+                </div>
+                <div style={{ padding: '10px 14px 10px 0', flex: 1 }}>
+                  <strong style={{ fontSize: 14, display: 'block' }}>Kamina Keräys</strong>
+                  <span style={{ fontSize: 12, color: 'var(--accent-marketing)' }}>View project →</span>
+                </div>
+              </Link>
+              <Link
+                to="/projects/helsingin-kirjamessut"
+                className="glass"
+                style={{ display: 'flex', alignItems: 'center', gap: 14, padding: 0, borderRadius: 12, overflow: 'hidden', textDecoration: 'none', color: 'inherit' }}
+              >
+                <div style={{ width: 96, flexShrink: 0, aspectRatio: '16/9', overflow: 'hidden' }}>
+                  <img
+                    src="/projects/helsingin-kirjamessut/presentation.png"
+                    alt="Helsingin Kirjamessut presentation design"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  />
+                </div>
+                <div style={{ padding: '10px 14px 10px 0', flex: 1 }}>
+                  <strong style={{ fontSize: 14, display: 'block' }}>Helsingin Kirjamessut</strong>
+                  <span style={{ fontSize: 12, color: 'var(--accent-marketing)' }}>View project →</span>
+                </div>
+              </Link>
             </div>
-          </Link>
-
-          {/* Digital Content Strategy */}
-          <SubsectionHeader title={marketingTypes.digitalContent.title} />
-          {marketingTypes.digitalContent.cards.map((card, i) => (
-            <div key={i} className="glass-deep section-marketing reveal" style={{ padding: 28, borderRadius: 16, marginBottom: 20 }}>
-              <h4 style={{ fontFamily: 'var(--font-accent)', fontSize: 16, fontWeight: 600, letterSpacing: '0.04em', marginBottom: 4 }}>{card.org}</h4>
-              {card.period && <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: card.highlight ? 8 : 12 }}>{card.period}</p>}
-              {card.highlight && (
-                <p style={{ fontFamily: 'var(--font-numbers)', fontSize: 24, fontWeight: 600, letterSpacing: '0.04em', color: 'var(--accent-marketing)', marginBottom: 12 }}>{card.highlight}</p>
-              )}
-              <ul style={{ marginBottom: 16, paddingLeft: 20, color: 'var(--text-secondary)', lineHeight: 1.7 }}>
-                {card.content.map((line) => <li key={line}>{line}</li>)}
-              </ul>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginBottom: 20 }}>
-                {card.tags.map((tag) => (
-                  <span key={tag} className="tag-chip" style={{ borderColor: 'color-mix(in srgb, var(--accent-marketing) 50%, transparent)' }}>{tag}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-
-          {/* Fundraising & Campaign Marketing */}
-          <SubsectionHeader title={marketingTypes.fundraising.title} />
-          <Link
-            to="/projects/kamina-kerays"
-            className="glass-deep section-marketing reveal"
-            style={{ display: 'flex', alignItems: 'center', gap: 20, padding: 0, borderRadius: 16, marginBottom: 20, overflow: 'hidden', textDecoration: 'none', color: 'inherit' }}
-          >
-            <div style={{ width: 200, flexShrink: 0, aspectRatio: '16/9', overflow: 'hidden' }}>
-              <img
-                src="/projects/kamina-kerays/campaign.png"
-                alt="Kamina Keräys campaign design"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-              />
-            </div>
-            <div style={{ padding: 24, flex: 1 }}>
-              <strong style={{ fontFamily: 'var(--font-accent)', fontSize: 16, letterSpacing: '0.04em', display: 'block', marginBottom: 4 }}>Kamina Keräys</strong>
-              <p style={{ fontSize: 14, color: 'var(--text-secondary)', margin: 0 }}>Stove fundraising campaign — Ukrainalaisten yhdistys Suomessa</p>
-              <p style={{ fontSize: 13, color: 'var(--accent-marketing)', marginTop: 8 }}>View project →</p>
-            </div>
-          </Link>
-          {marketingTypes.fundraising.cards.map((card, i) => (
-            <div key={i} className="glass-deep section-marketing reveal" style={{ padding: 28, borderRadius: 16, marginBottom: 20 }}>
-              <h4 style={{ fontFamily: 'var(--font-accent)', fontSize: 16, fontWeight: 600, letterSpacing: '0.04em', marginBottom: 4 }}>{card.org}</h4>
-              {card.period && <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: card.highlight ? 8 : 12 }}>{card.period}</p>}
-              {card.highlight && (
-                <p style={{ fontFamily: 'var(--font-numbers)', fontSize: 24, fontWeight: 600, letterSpacing: '0.04em', color: 'var(--accent-marketing)', marginBottom: 12 }}>{card.highlight}</p>
-              )}
-              <ul style={{ marginBottom: 16, paddingLeft: 20, color: 'var(--text-secondary)', lineHeight: 1.7 }}>
-                {card.content.map((line) => <li key={line}>{line}</li>)}
-              </ul>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                {card.tags.map((tag) => (
-                  <span key={tag} className="tag-chip" style={{ borderColor: 'color-mix(in srgb, var(--accent-marketing) 50%, transparent)' }}>{tag}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-
-          {/* Visual & Brand Design */}
-          <SubsectionHeader title={marketingTypes.visualBrand.title} />
-          {marketingTypes.visualBrand.cards.map((card, i) => (
-            <div key={i} className="glass-deep section-marketing reveal" style={{ padding: 28, borderRadius: 16, marginBottom: 20 }}>
-              <h4 style={{ fontFamily: 'var(--font-accent)', fontSize: 16, fontWeight: 600, letterSpacing: '0.04em', marginBottom: 4 }}>{card.org}</h4>
-              {card.period && <p style={{ fontSize: 14, color: 'var(--text-muted)', marginBottom: 12 }}>{card.period}</p>}
-              <ul style={{ marginBottom: 16, paddingLeft: 20, color: 'var(--text-secondary)', lineHeight: 1.7 }}>
-                {card.content.map((line) => <li key={line}>{line}</li>)}
-              </ul>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                {card.tags.map((tag) => (
-                  <span key={tag} className="tag-chip" style={{ borderColor: 'color-mix(in srgb, var(--accent-marketing) 50%, transparent)' }}>{tag}</span>
-                ))}
-              </div>
-            </div>
-          ))}
+          </div>
 
           {/* Marketing Coordination */}
           <SubsectionHeader title={marketingTypes.coordination.title} />
